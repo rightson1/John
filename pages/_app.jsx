@@ -23,8 +23,8 @@ function MyApp(props) {
   return (
     <>
       <Head>
-        <title>hfoods </title>
-        <meta name="description" content="Highrise Cannnan foods delivery application" />
+        <title>JLM </title>
+        <meta name="description" content="JLM" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
