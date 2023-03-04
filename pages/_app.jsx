@@ -1,0 +1,57 @@
+import "../styles/globals.css";
+import "../styles/client.css";
+import Head from "next/head";
+import { CacheProvider } from '@emotion/react';
+import createEmotionCache from '../utils/createCache';
+import PropTypes from 'prop-types';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import { ThemeProvider } from "../utils/themeContext";
+import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "react-scroll-to-top";
+import { Toaster } from "react-hot-toast";
+import Navbar from "../components/Navbar";
+import TemporaryDrawer from "../components/Sidebar";
+import Footer from "../components/Footer";
+
+function MyApp(props) {
+
+  const clientSideEmotionCache = createEmotionCache();
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  return (
+    <>
+      <Head>
+        <title>hfoods </title>
+        <meta name="description" content="Highrise Cannnan foods delivery application" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+
+      </Head>
+      <CacheProvider value={emotionCache}>
+        <AnimatePresence>
+          <ThemeProvider>
+            <div className="h-screen">
+              <Navbar />
+              <div className="">
+                <Component {...pageProps} />
+                <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
+                <Toaster />
+                <TemporaryDrawer />
+                <Footer />
+              </div>
+            </div>
+          </ThemeProvider>
+        </AnimatePresence>
+      </CacheProvider>
+    </>
+  );
+}
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  emotionCache: PropTypes.object,
+  pageProps: PropTypes.object.isRequired,
+};
+
+export default MyApp;
