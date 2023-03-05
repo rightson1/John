@@ -182,7 +182,8 @@ function Navbar() {
                                 }
                             }}
                         >
-                            JLM
+                            {/* JLM */}
+                            <img src="/logo.png" className='w-[50px] rounded-full' alt="" />
                             {/* <img src="/logo.svg" className='w-[40px]' alt="" /> */}
                         </Box>
 
