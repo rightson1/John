@@ -9,7 +9,7 @@ export default function Home() {
     const router = useRouter();
     return (
 
-        <Box className="landing h-screen px-10 md:px-20 pb-4 md:pb-0 pt-10 flex flex-col justify-between ">
+        <Box className="landing px-10 md:px-20 pb-10 md:pb-0 pt-10 flex flex-col justify-between  h-[95vh]">
             <img src="/heroLogo.svg" alt="" className="w-[150px] md:w-[200px]" />
             <div className="flex justify-between items-start  w-full  flex-col md:flex-row ">
                 <div className="w-full md:w-[400px] h-[200px] md:h-[250px] bg-black  flex justify-center flex-col px-5"
