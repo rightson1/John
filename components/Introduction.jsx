@@ -7,7 +7,7 @@ import { FaRegEye } from "react-icons/fa";
 const Introduction = () => {
     const { colors } = useGlobalProvider();
     const Item = ({ icon, name, pr }) => (
-        <Box className="bg-black py-10 gap-5 px-5 flex justify-center flex-col items-center max-w-[300px]">
+        <Box className="bg-black py-10 gap-5 px-5 flex justify-center flex-col items-center w-[280px] h-[300px]">
             {icon}
             <Typography variant="h4" fontFamily="Lato" className=" text-white font-bold  " letterSpacing={10} textAlign="center">
                 {name}
@@ -18,9 +18,9 @@ const Introduction = () => {
 
         </Box>
     )
-    return <Box container className="relative ">
+    return <Box container className="relative min-h-[90vh]">
 
-        <Grid container rowSpacing={3} className="z-[6] h-[85%]   w-full " >
+        <Grid container rowSpacing={3} className="z-[6] h-[85%] flex    w-full   " >
 
             <Grid item xs={12} md={6} className="flex flex-col  h-full px-5  md:pl-20 z-10 py-20 gap-5"
                 sx={{
@@ -53,7 +53,8 @@ const Introduction = () => {
 
 
             </Grid>
-            <Grid item xs={12} md={6} className="z-10">
+            <Grid item xs={12} md={6} className="z-10  self-end justify-end mt-10"
+            >
 
                 <Grid container>
 
@@ -99,14 +100,14 @@ supplies contractor."
 
         <Grid container className="z-[3] absolute w-full h-full top-0 left-0  overflow-hidden" >
 
-            <Grid item xs={12} md={4} className=" flex-col justify-center items-center gap-5 p-10 relative pb-[200px] "
+            <Grid item xs={12} md={4} className=" flex-col justify-center items-center gap-5 p-10 relative pb-[200px]  "
                 sx={{
                     display: {
                         xs: 'none',
                         md: 'flex'
                     }
                 }}>
-
+                bbb
                 <Box
                     sx={{
                         display: {

@@ -78,22 +78,26 @@ carry out our projects." />
 
         </div>
 
-        {/* <Box sx={{
+        <Box sx={{
             display: {
-                xs: "block",
-                md: "none"
+                xs: "none",
+                md: "block"
             }
         }} className="bottom-5 left-5 z-[6] absolute  flex flex-col -gap-[5px]">
-            <Typography variant="body1" fontFamily="Lato" className=" text-white" >
+            <Typography variant="body1" fontFamily="Lato" className=" e" sx={{
+                color: colors.yellow[500]
+            }}>
                 4.
             </Typography>
 
             <Box className="w-[50px] h-[3px]  my-3
-        "  bgcolor='white'></Box>
-            <Typography variant="body2" fontFamily="Lato" className="text-white text-[12px]" >
+        "  bgcolor={colors.yellow[500]}></Box>
+            <Typography variant="body2" fontFamily="Lato" className="text-[12px]" sx={{
+                color: colors.yellow[500]
+            }}>
                 Q UA L I T Y P R O F E S S I O N A L S E RV I C E S D E L I V E R E D A S A STA N DA R D . . .
             </Typography>
-        </Box> */}
+        </Box>
     </Grid>;
 };
 

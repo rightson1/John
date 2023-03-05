@@ -52,7 +52,7 @@ const Footer = () => {
         }}
 
         container bgcolor={colors.grey[100]}>
-        <Grid item xs={12} md={4} className="flex justify-center items-center p-4 gap-4">
+        <Grid item xs={12} md={4} className="flex justify-center items-center p-4 gap-4 py-[100px]">
             <img src="/asset.png" alt="" className="max-w-[150px] max-h-[100px] " />
             <Typography className="py-2 text-white" color={colors.grey[100]} variant="body1" fontFamily="Source Sans Pro">
                 John Lee Miller Limited is a fast growing

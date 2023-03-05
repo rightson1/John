@@ -4,6 +4,7 @@ import { useState } from "react";
 import Details from "../components/Details";
 import HomeHero from "../components/HomeHero";
 import Introduction from "../components/Introduction";
+import Market from "../components/Market";
 import Partners from "../components/Partners";
 import Stand from "../components/Stand";
 
@@ -15,8 +16,9 @@ export default function Home() {
 
         <Box className="h-full ">
             <HomeHero />
-            <Introduction />
             <Details />
+            <Introduction />
+            <Market />
             <Stand />
             <Partners />
         </Box>
