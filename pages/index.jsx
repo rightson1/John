@@ -10,7 +10,7 @@ export default function Home() {
     return (
 
         <Box className="landing px-10 md:px-20 pb-10 md:pb-0 pt-10 flex flex-col justify-between sm:min-h-[95vh]   md:min-h-screen gap-[50px]">
-            <img src="/heroLogo.svg" alt="" className="w-[150px] md:w-[170px] lg:w-[270px] llg:w-[270px]  " />
+            <img src="/logo.svg" alt="" className="w-[150px] md:w-[170px] lg:w-[270px] llg:w-[270px]  " />
             <div className="flex justify-between items-start  w-full  flex-col md:flex-row ">
                 <div className="w-full space-y-1 md:w-[400px] h-[200px] md:h-[250px] bg-black  flex justify-center flex-col px-5 lg:h-[250px] lg:w-[500px] llg:w-[600px] llg:h-[300px]"
                 >
@@ -42,14 +42,14 @@ export default function Home() {
 
                     }} sx={{
                         color: colors.yellow[500],
-                        fontWeight: 600
+                        fontWeight: 300
                     }} className="  mt-5 "  >
                         in both workmanship, professionalism
                         and value for money
                     </Typography>
                 </div>
                 <Button className="justify-evenly w-[200px] h-[50px] rounded-none self-center"
-                    onClick={() => { router.push('/homepage') }}
+                    onClick={() => { router.push('/jml.pdf') }}
                     sx={{
                         backgroundColor: '#fff200' + " !important",
                         display: {
@@ -63,7 +63,7 @@ export default function Home() {
                 </Button>
             </div>
             <Button className="justify-evenly w-[200px] h-[50px] rounded-none self-center"
-                onClick={() => { router.push('/homepage') }}
+                onClick={() => { router.push('/jml.pdf') }}
                 sx={{
                     backgroundColor: '#fff200' + " !important",
                     display: {

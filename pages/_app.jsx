@@ -44,6 +44,14 @@ function MyApp(props) {
                   <TemporaryDrawer />
                   <Footer />
                 </div>
+              </div> : Component.nolayout ? <div className="h-screen w-screen overflow-x-hidden">
+                <div className="">
+                  <Component {...pageProps} />
+                  <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
+                  <Toaster />
+                  <TemporaryDrawer />
+
+                </div>
               </div> : <div className="h-screen w-screen overflow-x-hidden">
                 <HomeNav />
                 <div className="">

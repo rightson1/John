@@ -8,9 +8,9 @@ const HomeHero = () => {
         <div className=" h-[70%] md:h-[80%] w-screen ">
             <img src="/land.png" alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="flex px-4 py-10 md:px-10  justify-between ">
+        <div className="flex px-4 py-[60px] md:px-10  justify-between ">
             <div className="flex flex-col">
-                <Typography className="font-[100] text-[17px]" color={colors.grey[100]} variant="h4" fontFamily="Hec">
+                <Typography className="font-[100] text-[17px]" color={colors.grey[100]} variant="h4" fontFamily="Lato">
                     COMPANY PROFILE
                 </Typography>
                 <Box className="w-[70px] h-[5px]  my-3

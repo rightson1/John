@@ -27,4 +27,4 @@ export default function Home() {
 }
 
 
-Home.layout = true;
+Home.nolayout = true;
