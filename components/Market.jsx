@@ -66,12 +66,15 @@ const Market = () => {
             >
                 Main Business Sector
             </Typography>
-            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between ">
-                <Item icon={<AiOutlineBuild className="text-[50px] text-white" />} name="Building & construction-nca
-registered"/>
-                <Item icon={<FaStoreAlt className="text-[50px] text-white" />} name="General supplies" />
-
-            </div>
+            <Grid container spacing={5} >
+                <Grid item xs={12} md={4} className="flex flex-col gap-3 px-5">
+                    <Item icon={<AiOutlineBuild className="text-[70px] text-white" />} name="Building & construction-nca
+registered" />
+                </Grid>
+                <Grid item xs={12} md={4} className="flex flex-col gap-3 px-5">
+                    <Item icon={<FaStoreAlt className="text-[70px] text-white" />} name="General supplies" />
+                </Grid>
+            </Grid>
 
             <Typography variant="h4" fontFamily="Lato" className=" " sx={{
                 color: colors.yellow[500]
