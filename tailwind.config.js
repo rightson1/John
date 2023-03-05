@@ -8,7 +8,7 @@ module.exports = {
       },
       screens: {
         phone: { min: "100px", max: "400px" },
-        llg: "1200px",
+        llg: "1350px",
       },
       boxShadow: {
         "3xl": "10px 0px 60px -10px rgba(0, 0, 0, 0.3)",
