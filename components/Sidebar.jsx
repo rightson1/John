@@ -47,7 +47,7 @@ export default function TemporaryDrawer() {
 
         >
             <Box className="flex justify-between">
-                <Typography fontFamily="Lito" color={colors.yellow[500]} className='font-bold text-2xl'>
+                <Typography fontFamily="Lito" className='font-bold text-2xl'>
                     JVM
                 </Typography>
                 <IconButton className='self-end jus'>
@@ -65,7 +65,7 @@ export default function TemporaryDrawer() {
                             <>
                                 <ListItemButton className='py-5'>
                                     <ListItemIcon sx={{
-                                        color: colors.yellow[500]
+                                        // color: colors.yellow[500]
                                     }}>
                                         {item.icon}
                                     </ListItemIcon>

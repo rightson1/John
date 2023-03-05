@@ -23,165 +23,20 @@ body {
     right: 20px !important;
 }
 
-.wave {
-    animation-name: wave-animation;
-    /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s;
-    /* Change to speed up or slow down */
-    animation-iteration-count: infinite;
-    /* Never stop waving :) */
-    transform-origin: 70% 70%;
-    /* Pivot around the bottom-left palm */
-    display: inline-block;
+.agree {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../public//agree.jpg);
 }
 
-@keyframes wave-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(14deg);
-    }
-    /* The following five values can be played with to make the waving more or less extreme */
-    20% {
-        transform: rotate(-8deg);
-    }
-    30% {
-        transform: rotate(14deg);
-    }
-    40% {
-        transform: rotate(-4deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    /* Reset for the last half to pause */
-    100% {
-        transform: rotate(0deg);
-    }
+.build {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/build.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.scroll-down {
-    border: 2px solid #000;
-    border-radius: 20px;
-    bottom: 60px;
-    height: 50px;
-    position: relative;
-    right: 0;
-    width: 20px;
-}
-
-.scroll-down::before {
-    animation: scrollDownAnimation 2s infinite;
-    background-color: #000;
-    border-radius: 100%;
-    content: "";
-    height: 6px;
-    left: 0;
-    margin: 0 auto;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    width: 6px;
-}
-
-@-moz-keyframes scrollDownAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-        transform: translate(0, 20px);
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes scrollDownAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-        transform: translate(0, 20px);
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@-o-keyframes scrollDownAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-        transform: translate(0, 20px);
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes scrollDownAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 0;
-        transform: translate(0, 20px);
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.products {
-    grid-area: products;
-}
-
-.explore {
-    grid-area: explore;
-}
-
-.category {
-    grid-area: category;
-}
-
-.maylike-products-wrapper {
-    margin-top: 120px;
-}
-
-.maylike-products-wrapper h2 {
-    text-align: center;
-    margin: 50px;
-    color: #324d67;
-    font-size: 28px;
-}
-
-.maylike-products-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.partner {
+    background: url(../public/partner.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

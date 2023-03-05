@@ -96,17 +96,17 @@ function Navbar() {
                             }}
                         >
                             <div className="flex gap-3">
-                                <PhoneIcon />
+                                <img src="/svgs/call.svg" className='w-[15px]' alt="" />
                                 <div>
                                     +254741381552
                                 </div>
                             </div>
-                            <div className="flex">
-                                <EmailIcon />
+                            <div className="flex gap-3">
+                                <img src="/svgs/email.svg" className='w-[15px]' alt="" />
                                 mail@jlmillerltd.com
                             </div>
                             <div className="flex gap-3 items-center">
-                                <LocationOnIcon />
+                                <img src="/svgs/location.svg" className='w-[15px]' alt="" />
                                 <div className="flex flex-col">
                                     <div className="flex text-[13px]  ">
                                         Chelezo Apartments Kindaruma Road
@@ -119,18 +119,11 @@ function Navbar() {
                             </div>
                         </Box>
                         <div className="flex gap-3 items-center color-black">
-                            <FacebookOutlinedIcon sx={{
-                                color: colors.grey[100]
-                            }} />
-                            <TwitterIcon sx={{
-                                color: colors.grey[100]
-                            }} />
-                            <LinkedInIcon sx={{
-                                color: colors.grey[100]
-                            }} />
-                            <InstagramIcon sx={{
-                                color: colors.grey[100]
-                            }} />
+                            <img src="/svgs/fb.svg" className='w-[15px]' alt="" />
+                            <img src="/svgs/insta.svg" className='w-[15px]' alt="" />
+                            <img src="/svgs/twitter.svg" className='w-[15px]' alt="" />
+                            <img src="/svgs/linked.svg" className='w-[15px]' alt="" />
+                            <img src="/svgs/whatsap.svg" className='w-[15px]' alt="" />
                         </div>
                     </Toolbar>
                 </Container>
@@ -187,9 +180,11 @@ function Navbar() {
 
                                 }
                             }}
-                        >JLM
-
+                        >
+                            JLM
+                            {/* <img src="/logo.svg" className='w-[40px]' alt="" /> */}
                         </Box>
+
                         <IconButton
                             size="large"
                             aria-label="account of current user"

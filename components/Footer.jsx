@@ -59,7 +59,7 @@ const Footer = () => {
                 Building and Construction company working towards being a world class contractor.
             </Typography>
         </Grid>
-        <Grid item xs={12} md={4} className="flex flex-col md:flex-grow justify-center items-center p-4 gap-4 flex-wrap ">
+        <Grid item xs={12} md={5} className="flex flex-col md:flex-row justify-center items-center p-4 gap-4  ">
             <Box className="flex flex-col justify-center items-start">
                 <div className="flex flex-col pl-5">
                     <Typography className="font-semibold text-white " color={colors.grey[100]} variant="h6" fontFamily="Source Sans Pro">
@@ -118,7 +118,7 @@ const Footer = () => {
                 </div>
             </Box>
         </Grid>
-        <Grid item xs={12} md={4} className="flex  justify-center items-center px-5">
+        <Grid item xs={12} md={3} className="flex  justify-center items-center px-5">
             <Button
                 className="uppercase rounded-none py-3   text-black flex items-center w-full"
                 sx={{
