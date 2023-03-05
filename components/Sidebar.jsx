@@ -34,12 +34,10 @@ export default function TemporaryDrawer() {
     };
 
     const list = () => (
-        <Box className="px-2"
+        <Box className="px-2 bg-transparent"
             sx={{
-                width: 250,
-                height: '100%',
                 py: 2,
-                pb: 10,
+                pb: 5,
             }}
             role="presentation"
             onClick={toggleDrawer(false)}
@@ -47,11 +45,9 @@ export default function TemporaryDrawer() {
 
         >
             <Box className="flex justify-between">
-                <Typography fontFamily="Lito" className='font-bold text-2xl'>
-                    JVM
-                </Typography>
+                <img src="/logo.png" className='w-[50px] rounded-full' alt="" />
                 <IconButton className='self-end jus'>
-                    <CloseIcon />
+                    <CloseIcon className='text-[30px]' />
                 </IconButton>
             </Box>
 
@@ -64,11 +60,7 @@ export default function TemporaryDrawer() {
                         return (
                             <>
                                 <ListItemButton className='py-5'>
-                                    <ListItemIcon sx={{
-                                        // color: colors.yellow[500]
-                                    }}>
-                                        {item.icon}
-                                    </ListItemIcon>
+
                                     <ListItemText>
                                         {item.name}
                                     </ListItemText>
@@ -87,8 +79,9 @@ export default function TemporaryDrawer() {
 
             <React.Fragment >
                 <Drawer
-                    anchor="left"
+                    anchor="top"
                     open={open}
+
 
                     onClose={toggleDrawer(false)}
                 >
