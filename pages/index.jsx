@@ -10,7 +10,7 @@ export default function Home() {
     return (
 
         <Box className="landing px-10 md:px-20 pb-20 md:pb-0 pt-10 flex flex-col justify-between min-h-screen   md:min-h-screen gap-[50px]">
-            <img src="/logo.svg" alt="" className="w-[150px] md:w-[170px] lg:w-[270px] llg:w-[270px]  " />
+            <img src="/logo.png" alt="" className="w-[150px] md:w-[170px] lg:w-[270px] llg:w-[270px]  " />
             <div className="flex justify-between items-start  w-full  flex-col md:flex-row ">
                 <div className="w-full space-y-1 md:w-[400px] h-[200px] md:h-[250px] bg-black  flex justify-center flex-col px-5 lg:h-[250px] lg:w-[500px] llg:w-[600px] llg:h-[300px]"
                 >
