@@ -7,16 +7,9 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import { useGlobalProvider } from "../utils/themeContext";
 import { useRouter } from 'next/router'
 import { useAuth } from '../utils/authContext';
-import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import { Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
+import { Typography } from '@mui/material';
 const nav = [{
     name: 'Home',
     link: '/'
@@ -89,17 +82,17 @@ function HomeNav() {
                             className='flex flex-row items-center gap-4 flex-1 '
                             onClick={() => { router.push('/') }}
                             sx={{
-                                fontFamily: 'Lato',
+                                fontFamily: 'Regular',
                                 fontWeight: 700,
-                                letterSpacing: '.3rem',
+
                                 color: colors.grey[100],
                             }}
                         >
                             <div className="flex gap-3">
                                 <img src="/svgs/call.svg" className='w-[15px]' alt="" />
-                                <div>
+                                <Typography fontFamily="Hec">
                                     +254741381552
-                                </div>
+                                </Typography>
                             </div>
                             <div className="flex gap-3">
                                 <img src="/svgs/email.svg" className='w-[15px]' alt="" />
