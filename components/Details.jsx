@@ -19,8 +19,22 @@ const Details = () => {
     )
     return <Grid container className="md:min-h-screen partner">
 
-        <Grid item xs={12} md={5} className="md:pt-2 " >
-            <div className="w-full h-full bg-black flex flex-col px-5 py-10 justify-center gap-4">
+        <Grid item xs={12} md={5} className="md:pt-2  relative" >
+            <Box className="absolute h-[400px] md:h-[420px] top-0  md:top-2 right-0 top-clip  w-[300px] z-[6]  " sx={{
+                bgcolor: colors.yellow[500],
+                clipPath: {
+                    xs: 'polygon(76% 0, 100% 23%, 100% 0)',
+                    md: 'polygon(76% 0, 100% 25%, 100% 0)',
+
+                }
+            }}
+            >
+
+            </Box>
+            <div className="w-full h-full bg-black flex flex-col px-5 py-10 justify-center gap-4 clip">
+
+
+
                 <Typography variant="h3" fontFamily="Lato" className="font-bold" sx={{
                     color: colors.yellow[500],
                 }}>

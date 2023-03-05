@@ -79,9 +79,9 @@ function HomeNav() {
                     md: 'flex'
                 }
             }}>
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" className='px-0'>
                     <Toolbar disableGutter
-                        className='flex px-[50px]'>
+                        className='flex  px-10 md:px-20 '>
                         <Box
                             variant="h6"
                             noWrap

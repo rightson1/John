@@ -49,3 +49,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.clip {
+  clip-path: polygon(82% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+}
+
+@font-face {
+  font-family: "Hec";
+  src: url("../assets/Hec/Hec.otf");
+  font-weight: 400;
+  font-style: normal;
+}
