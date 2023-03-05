@@ -32,7 +32,7 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <AnimatePresence>
           <ThemeProvider>
-            <div className="h-screen">
+            <div className="h-screen w-screen">
               <Navbar />
               <div className="">
                 <Component {...pageProps} />

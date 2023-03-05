@@ -66,10 +66,10 @@ const Market = () => {
             >
                 Main Business Sector
             </Typography>
-            <div className="flex gap-3 ">
-                <Item icon={<AiOutlineBuild className="text-[70px] text-white" />} name="Building & construction-nca
+            <div className="flex justify-between">
+                <Item icon={<AiOutlineBuild className="text-[50px] text-white" />} name="Building & construction-nca
 registered"/>
-                <Item icon={<FaStoreAlt className="text-[70px] text-white" />} name="General supplies" />
+                <Item icon={<FaStoreAlt className="text-[50px] text-white" />} name="General supplies" />
 
             </div>
 
