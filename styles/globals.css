@@ -2,41 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    width: 100vw;
-    overflow-x: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .scroll-to-top {
-    width: "15px !important";
-    display: "none !important";
+  width: "15px !important";
+  display: "none !important";
 }
 
 .top {
-    border-radius: 50% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    z-index: 10 !important;
-    position: fixed;
-    bottom: 60px !important;
-    right: 20px !important;
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  z-index: 10 !important;
+  position: fixed;
+  bottom: 60px !important;
+  right: 20px !important;
 }
 
 .agree {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../public//agree.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url(../public//agree.jpg);
 }
 
 .build {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/build.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/build.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .partner {
-    background: url(../public/partner.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url(../public/partner.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing {
+  background: url(../public/hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 65px);
 }
