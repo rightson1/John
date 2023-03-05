@@ -110,7 +110,15 @@ of water facilities" />
                 </Grid>
             </Grid>
         </Grid>
-        <Box className="flex-col  items-start  flex my-10 absolute left-10  max-w-[300px] -bottom-5">
+        <Box className="flex-col  items-start  my-10 absolute left-10  max-w-[300px] -bottom-5"
+            sx={{
+                display: {
+                    xs: 'none',
+                    md: 'flex'
+                }
+
+            }}
+        >
             <Typography variant="h6" fontFamily="Lato" className=" text-black" >
                 3.
             </Typography>
