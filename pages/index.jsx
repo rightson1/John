@@ -73,7 +73,7 @@ export default function Home() {
                 }}>
 
                 <img src="/eye.svg" alt="" className="w-[30px]" />
-                <Typography className="text-black">Visit Our Profile</Typography>
+                <Typography className="text-black">View Our Profile</Typography>
             </Button>
 
 

@@ -103,31 +103,31 @@ const listItems = [
     },
     {
         name: 'ABOUT US',
-        link: '/about',
+        link: '/',
         icon: <QuestionMarkOutlinedIcon />
 
     },
     {
         name: 'OUR SERVICES',
-        link: '/services',
+        link: '/',
         icon: <MiscellaneousServicesOutlinedIcon />
 
     },
     {
         name: 'PROJECTS',
-        link: '/projects',
+        link: '/',
         icon: <HomeWorkIcon />
 
     },
     {
         name: 'NEW & BLOGS',
-        link: '/blogs',
+        link: '/',
         icon: <BookIcon />
 
     },
     {
         name: 'CONTACT US',
-        link: '/contact us',
+        link: '/',
         icon: <CallOutlinedIcon />
 
     },
