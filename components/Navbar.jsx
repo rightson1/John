@@ -18,6 +18,7 @@ import { Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import { Typography } from '@mui/material';
+import Link from 'next/link';
 const nav = [{
     name: 'Home',
     link: '/'
@@ -25,9 +26,6 @@ const nav = [{
 {
     name: 'About Us ',
     link: '/about'
-}, {
-    name: 'Stores',
-    link: '/search'
 }, {
     name: 'Our Services',
     link: '/services'
@@ -132,19 +130,25 @@ function Navbar() {
                     </Toolbar>
                 </Container>
                 <Box
-                    className="flex justify-center items-center  absolute -bottom-[40px] z-10 w-full">
-                    <div className="flex gap-3 bg-white">
+                    className="flex justify-center items-center  absolute -bottom-[50px] z-10 w-full">
+                    <div className="flex gap-3 bg-white shadow-md">
                         {
-                            nav.map((item, index) => <Button key={index} className="uppercase rounded-none py-3  px-4 hover:bg-primary text-black"
-                                sx={{
-                                    bgcolor: item.link == "/" && colors.black[100] + '!important',
-                                    color: item.link == "/" && colors.yellow[500] + '!important',
+                            nav.map((item, index) =>
+                                <Link href={`/${item.link}`} key={index}>
+                                    <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
+                                        sx={{
+                                            bgcolor: item.link == "/" && colors.black[100] + '!important',
+                                            color: item.link == "/" && colors.yellow[500] + '!important',
 
-                                }}
-                            >
-                                {item.name}
+                                        }}
+                                    >
+                                        {item.name}
 
-                            </Button>)
+                                    </Button>
+                                </Link>
+
+
+                            )
                         }
                     </div>
 
@@ -160,7 +164,7 @@ function Navbar() {
             }}>
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters
-                        className='flex'>
+                        className='flex justify-between'>
                         <Box
                             variant="h6"
                             noWrap
@@ -177,12 +181,7 @@ function Navbar() {
                                 fontSize: {
                                     xs: '1.8rem',
                                 },
-                                flexGrow: {
-                                    sm: 1,
-                                    xs: 1,
-                                    md: 0
 
-                                }
                             }}
                         >
                             {/* JLM */}

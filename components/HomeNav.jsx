@@ -135,7 +135,7 @@ function HomeNav() {
             }}>
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters
-                        className='flex'>
+                        className='flex justify-between'>
                         <Box
                             variant="h6"
                             noWrap
@@ -152,12 +152,7 @@ function HomeNav() {
                                 fontSize: {
                                     xs: '1.8rem',
                                 },
-                                flexGrow: {
-                                    sm: 1,
-                                    xs: 1,
-                                    md: 0
 
-                                }
                             }}
                         >
                             <img src="/logo.png" className='w-[50px] rounded-full' alt="" />

@@ -41,6 +41,7 @@ export const ThemeProvider = ({ children }) => {
     const isMobile = useMediaQuery("(max-width: 600px)")
     const isMobileSmall = useMediaQuery("(max-width: 600px)")
     const isLarge = useMediaQuery("(min-width: 900px)");
+    const isMedium = useMediaQuery("(max-width: 900px)");
     const [change, setChange] = useState(false)
     const [queryClient] = useState(() => new QueryClient());
     const [cart, setCart] = useState([])
@@ -74,7 +75,8 @@ export const ThemeProvider = ({ children }) => {
                 cart,
                 setCart,
                 animate,
-                setAnimate
+                setAnimate,
+                isMedium,
             }}
         >
 

@@ -19,6 +19,7 @@ import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/Miscellaneous
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import BookIcon from '@mui/icons-material/Book';
 import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import Link from 'next/link';
 export default function TemporaryDrawer() {
     const { open, setOpen, colors } = useGlobalProvider()
     const { admin, logout } = useAuth()
@@ -59,12 +60,14 @@ export default function TemporaryDrawer() {
 
                         return (
                             <>
-                                <ListItemButton className='py-5'>
+                                <Link href={item.link}>
+                                    <ListItemButton className='py-5'>
 
-                                    <ListItemText>
-                                        {item.name}
-                                    </ListItemText>
-                                </ListItemButton>
+                                        <ListItemText>
+                                            {item.name}
+                                        </ListItemText>
+                                    </ListItemButton>
+                                </Link>
                             </>
                         )
 
@@ -103,31 +106,31 @@ const listItems = [
     },
     {
         name: 'ABOUT US',
-        link: '/',
+        link: '/about',
         icon: <QuestionMarkOutlinedIcon />
 
     },
     {
         name: 'OUR SERVICES',
-        link: '/',
+        link: '/services',
         icon: <MiscellaneousServicesOutlinedIcon />
 
     },
     {
         name: 'PROJECTS',
-        link: '/',
+        link: '/projects',
         icon: <HomeWorkIcon />
 
     },
     {
         name: 'NEW & BLOGS',
-        link: '/',
+        link: '/blogs',
         icon: <BookIcon />
 
     },
     {
         name: 'CONTACT US',
-        link: '/',
+        link: '/contact',
         icon: <CallOutlinedIcon />
 
     },
