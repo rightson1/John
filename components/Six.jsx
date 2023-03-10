@@ -17,51 +17,47 @@ const Six = () => {
         <Box className="w-[70px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
 
-        <Grid container className="flex justify-center">
-            <Grid xs={6} md={2} item>
+        <Box className="flex flex-wrap justify-center items-start">
 
-                <img src="/PNG/1.png" alt="" className="w-full h-[150px] max-w-[250px]" />
-                <Typography className="font-semibold" color={colors.grey[100]} fontFamily="Source Sans Pro">
-                    Other contractors in
-                    the building & construction
-                    industry
-                </Typography>
+            {list.map((item, index) => (
+                <Box className="w-[150px] flex flex-col justify-center items-center" key={index}>
 
-            </Grid>
-            <Grid xs={6} md={2} item>
+                    <img src={item.img} alt="" className="w-[100px] h-[100px] max-w-[250px]" />
+                    <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
+                        {item.title}
+                    </Typography>
 
-                <img src="/PNG/2.png" alt="" className="w-full h-[150px] max-w-[250px]" />
-                <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
-                    General Suppliers
-                </Typography>
+                </Box>
 
-            </Grid>
-            <Grid xs={6} md={2} item>
-
-                <img src="/PNG/3.png" alt="" className="w-full h-[150px] max-w-[250px]" />
-                <Typography className="font-semibold pr-5 " textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
-                    Private Sector
-                </Typography>
-
-            </Grid>
-            <Grid xs={6} md={2} item>
-
-                <img src="/PNG/4.png" alt="" className="w-full h-[150px] max-w-[250px]" />
-                <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
-                    County Government
-                </Typography>
-
-            </Grid>
-            <Grid xs={6} md={2} item>
-
-                <img src="/PNG/5.png" alt="" className="w-full h-[150px] max-w-[250px]" />
-                <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
-                    National Government
-                </Typography>
-
-            </Grid>
-        </Grid>
+            ))}
+        </Box>
     </Grid>
 };
 
+const list = [
+    {
+        title: "Other contractors in the building & construction industry",
+        img: "/PNG/1.png"
+
+    },
+    {
+        title: "General Suppliers",
+        img: "/PNG/2.png"
+    },
+    {
+        title: "Private Sector",
+        img: "/PNG/3.png"
+
+    },
+    {
+        title: "County Government",
+        img: "/PNG/4.png"
+
+    },
+    {
+        title: "National Government",
+        img: "/PNG/5.png"
+    }
+
+]
 export default Six;

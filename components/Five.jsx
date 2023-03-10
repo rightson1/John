@@ -1,19 +1,14 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import TrackChangesIcon from '@mui/icons-material/TrackChanges';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
+import KeyboardBackspaceOutlinedIcon from '@mui/icons-material/KeyboardBackspaceOutlined';
 const Five = () => {
     const { colors } = useGlobalProvider();
-    return <Grid container gap={3}
+    return <Grid container
         className="bg-primary">
-        <Grid item xs={12} md={5.5} className="relative h-[400px] w-[100%] ">
+        <Grid item xs={12} md={5} className="relative h-[450px] w-[100%] ">
             <img src="/ex.png" alt="" className="w-full h-full" />
             <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] " >
                 <Typography className="font-semibold text-white  md:pl-[60px]" color={colors.grey[100]} fontFamily="Source Sans Pro">
@@ -21,50 +16,93 @@ const Five = () => {
                 </Typography>
             </Box>
         </Grid>
-        <Grid item xs={12} md={5.5} className="p-4 flex-col gap-4 flex">
-            <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+        <Grid item xs={12} md={7} className="p-4 flex-col flex">
+            <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
                 OUR SERVICES
             </Typography>
-            <Box className="w-[70px] h-[5px]  my-3
+            <Box className="w-[70px] h-[5px]  my-5
         "  bgcolor={colors.yellow[500]}></Box>
-            <Grid container spacing={3}>
-                <Grid item xs={12} md={6} className="flex gap-4 flex-col">
-                    <Card  >
-                        <CardMedia className="relative"
-                            sx={{ height: 140 }}
-                            image="/ind.png"
-                            title="green iguana"
-                        />
-                        <CardContent className="bg-black">
-                            <Typography variant="h6" className="text-white">
-                                Building & construction-
-                                nca registered
-                            </Typography>
-                        </CardContent>
+            <div className="flex">
+                <Button
+                    sx={{
+                        display: {
+                            xs: "none",
+                            md: "block"
+                        }
 
-                    </Card>
+                    }}
+                    className="h-[40px] self-center -translate-y-10">
+                    <img src="/svgs/left.svg" alt="" className="w-[30px] h-[10px]" />
+                </Button>
+                <Grid container spacing={3}>
+                    <Grid item xs={12} md={6} className="flex  flex-col">
+                        <div className="card flex flex-col  h-[350px] ">
+                            <div className="w-full  overflow-hidden">
+                                <img src="/ind.png" alt="" className=" w-full" />
+                            </div>
+                            <div className="bg-black h-1/4">
+                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4">
+                                    Building & construction-
+                                    nca registered
+                                </Typography>
+                            </div>
+                        </div>
+                        <Button className="w-[200px] self-center mt-2  items-center gap-1" sx={{
+                            color: "black",
+                            bgcolor: colors.yellow[500] + " !important",
+                            display: {
+                                xs: "flex ",
+                                md: "none"
+                            }
+
+                        }
+                        }
+                        >
+
+                            Next
+                            <ArrowRightAltOutlinedIcon />
+                        </Button>
+
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{
+                        display: {
+                            xs: "none",
+                            md: "block"
+                        }
+                    }} className="gap-4 ">
+                        <div className="card flex flex-col  h-[350px] ">
+                            <div className="w-full  overflow-hidden">
+                                <img src="/ind2.png" alt="" className=" w-full" />
+                            </div>
+                            <div className="bg-black h-1/4">
+                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4">
+                                    General Supplies
+                                </Typography>
+                            </div>
+                        </div>
+
+                    </Grid>
+
+
                 </Grid>
-                <Grid item xs={12} md={6} className="flex gap-4 flex-col">
-                    <Card  >
-                        <CardMedia className="relative"
-                            sx={{ height: 140 }}
-                            image="/ind2.png"
-                            title="green iguana"
-                        />
-                        <CardContent className="bg-black">
-                            <Typography variant="h6" className="text-white">
-                                General Supplies
-                            </Typography>
-                        </CardContent>
+                <Button className="h-[40px] self-center -translate-y-10"
+                    sx={{
+                        display: {
+                            xs: "none",
+                            md: "block"
+                        }
 
-                    </Card>
-                </Grid>
+                    }}
+                >
+                    <img src="/svgs/right.svg" alt="" className="w-[30px] h-[10px]" />
+                </Button>
+            </div>
 
-
-            </Grid>
         </Grid>
 
-    </Grid >
+
+    </Grid>
 };
 
 export default Five;

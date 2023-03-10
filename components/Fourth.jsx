@@ -10,8 +10,10 @@ const Fourth = () => {
     const { colors } = useGlobalProvider();
     return <Grid container gap={3}
         className="px-1 md:px-[80px] py-10">
-        <Grid item xs={12} md={5.5} className=" p-4">
-            <img src="/machine.png" alt="" className="h-[300px] w-[100%] md:w-3/4  " />
+        <Grid item xs={12} md={5.5} className=" p-4" sx={{
+
+        }}>
+            <img src="/machine.png" alt="" className="h-[400px] md:h-full w-[100%] " />
         </Grid>
         <Grid item xs={12} md={5.5} className="p-4 flex-col gap-4 flex">
             <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">

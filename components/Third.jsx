@@ -15,12 +15,13 @@ const Third = () => {
                 OUR MISSION
             </Typography>
 
-            <Typography sx={{
-                backgroundColor: colors.grey[700] + '!important',
+            <Box sx={{
+                backgroundColor: colors.grey[800] + '!important',
+
             }}
-                className="font-semibold p-2" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
-                <TrackChangesIcon className="mr-2 text-[30px]" />
-            </Typography>
+                className="h-[60px] flex justify-center items-center" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+                <img src="/svgs/mission.svg" alt="" className="w-[50px]" />
+            </Box>
             <Typography textAlign="center" fontFamily="Source Sans Pro" className="py-5 font-bold" >
                 To deliver the highest standards in both workmanship, professionalism and value for
                 money & to be the preferred contractor by clients in the building & Construction industry.
@@ -33,12 +34,13 @@ const Third = () => {
                 OUR VISION
             </Typography>
 
-            <Typography sx={{
-                backgroundColor: colors.grey[700] + '!important',
+            <Box sx={{
+                backgroundColor: colors.grey[800] + '!important',
+
             }}
-                className="font-semibold p-2" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
-                <VisibilityOutlinedIcon className="mr-2 text-[30px]" />
-            </Typography>
+                className="h-[60px] items-center flex justify-center " textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+                <img src="/svgs/vision.svg" alt="" className="w-[50px]" />
+            </Box>
             <Typography textAlign="center" fontFamily="Source Sans Pro" className="py-5 font-bold" >
                 To grow into a world class reliable building, construction and general supplies contractor.
             </Typography>

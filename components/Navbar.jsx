@@ -98,24 +98,27 @@ function Navbar() {
                         >
                             <div className="flex gap-3">
                                 <img src="/svgs/call.svg" className='w-[15px]' alt="" />
-                                <Typography fontFamily="Hec">
+                                <Typography fontFamily="Lato">
                                     +254741381552
                                 </Typography>
                             </div>
                             <div className="flex gap-3">
                                 <img src="/svgs/email.svg" className='w-[15px]' alt="" />
-                                mail@jlmillerltd.com
+                                <Typography fontFamily="Lato">
+                                    mail@jlmillerltd.com
+                                </Typography>
+
                             </div>
                             <div className="flex gap-3 items-center">
                                 <img src="/svgs/location.svg" className='w-[15px]' alt="" />
                                 <div className="flex flex-col">
-                                    <div className="flex text-[13px]  ">
+                                    <Typography fontFamily="Lato" className="flex text-[13px]  ">
                                         Chelezo Apartments Kindaruma Road
 
-                                    </div>
-                                    <div className="flex text-[13px]  ">
+                                    </Typography>
+                                    <Typography fontFamily="Lato" className="flex text-[13px]  ">
                                         P O Box 5401-001, Nairobi.
-                                    </div>
+                                    </Typography>
                                 </div>
                             </div>
                         </Box>

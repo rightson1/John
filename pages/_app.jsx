@@ -16,6 +16,7 @@ import Navbar from "../components/Navbar";
 import TemporaryDrawer from "../components/Sidebar";
 import Footer from "../components/Footer";
 import HomeNav from "../components/HomeNav";
+import PlaceDrawer from "../components/PlaceDrawer";
 
 function MyApp(props) {
 
@@ -58,7 +59,7 @@ function MyApp(props) {
                   <Component {...pageProps} />
                   <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
                   <Toaster />
-                  <TemporaryDrawer />
+                  <PlaceDrawer />
 
                 </div>
               </div>
