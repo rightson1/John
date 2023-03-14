@@ -55,11 +55,11 @@ const Footer = () => {
         <Grid item xs={12} sx={{
             display: {
                 xs: 'none',
-                md: 'block'
+                md: 'flex'
             }
-        }} md={4} className=" flex-wrap justify-center items-center p-4 gap-4 py-[100px]">
+        }} md={4} className=" flex-col md:flex-row justify-center items-center p-4 gap-4 py-[100px]">
             <img src="/asset.png" alt="" className="max-w-[150px] max-h-[100px] " />
-            <Typography className="py-2 text-white  px-4" textAlign="center" color={colors.grey[100]} variant="body1" fontFamily="Source Sans Pro">
+            <Typography className="py-2 text-white  px-4" textAlign="center" color={colors.grey[100]} variant="body1" fontFamily="Lato">
                 John Lee Miller Limited is a fast growing
                 Building and Construction company working towards being a world class contractor.
             </Typography>
@@ -67,7 +67,7 @@ const Footer = () => {
         <Grid item xs={12} md={5} className="flex flex-col md:flex-row justify-center items-center p-4 gap-4  ">
             <Box className="flex flex-col justify-center items-start">
                 <div className="flex flex-col pl-5">
-                    <Typography className="font-semibold text-white " color={colors.grey[100]} variant="h6" fontFamily="Source Sans Pro">
+                    <Typography className="font-semibold text-white " color={colors.grey[100]} variant="h6" fontFamily="Lato">
                         Quick Links
                     </Typography>
                     <Box className="w-[70px] h-[5px]  my-3 flex justify-center items-start
@@ -90,7 +90,7 @@ const Footer = () => {
                                 sx={{
                                     mr: 2,
                                     display: { xs: 'flex', md: 'flex' },
-                                    fontFamily: 'Source Sans Pro',
+                                    fontFamily: 'Lato',
                                     fontWeight: 700,
                                     letterSpacing: '.3rem',
 
@@ -111,7 +111,7 @@ const Footer = () => {
 
             </Box>
             <Box className="flex-1 w-full  flex flex-col gap-2">
-                <Typography className="font-semibold text-white" color={colors.grey[100]} variant="h6" fontFamily="Source Sans Pro">
+                <Typography className="font-semibold text-white" color={colors.grey[100]} variant="h6" fontFamily="Lato">
                     Subscribe to our Newsletter
                 </Typography>
                 <div className=" flex-1 flex justify-between items-center">

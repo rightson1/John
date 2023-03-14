@@ -2,10 +2,10 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { useGlobalProvider } from "../../utils/themeContext";
+import { useGlobalProvider } from "../utils/themeContext";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Divider from '@mui/material/Divider';
-import { client } from "../../lib/client";
+import { client } from "../lib/client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
@@ -64,10 +64,10 @@ const Projects = ({ posts }) => {
                                     <Typography variant="body1" fontFamily="Nunito" className=" text-black  " >
                                         {excerpt}
                                     </Typography>
-                                    <Link href={`/projects/${projectName}`}>
+                                    <Link href={`/projects/${slug}`}>
                                         <a className="flex items-center justify-center self-start">
                                             <Typography variant="h1" fontFamily="Hec" className=" text-black font-[900] text-xl" >
-                                                View Projects
+                                                Read More
                                             </Typography>
                                             <ArrowRightAltIcon className="text-black text-3xl" />
                                         </a>

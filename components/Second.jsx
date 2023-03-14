@@ -7,19 +7,19 @@ import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 const Second = () => {
     const { colors } = useGlobalProvider();
     return <Grid container
-        className="p-[90px] px-10 md:px-[80px]">
-        <Grid item xs={12} md={6} spacing={2}>
-            <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+        className="p-[90px] px-10 md:px-[80px] lg:px-[100px] llg:px-[120px]">
+        <Grid item xs={12} md={6} spacing={2} className="md:py-10">
+            <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 ABOUT US
             </Typography>
             <Box className="w-[70px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
             <div className="flex gap-3 flex-col">
-                <Typography color={colors.grey[100]} variant="h6" fontFamily="Source Sans Pro" className="font-[600]">
+                <Typography color={colors.grey[100]} variant="h6" fontFamily="Lato" className="font-[600]">
                     John Lee Miller Limited is a fast growing Building and Construction company working towards being a world class contractor. Through commitment to improvements we are continuously seeking waste elimination, driving up quality of our services and maximizing value to for clients.
 
                 </Typography>
-                <Typography className="font-[600]" color={colors.grey[100]} variant="h6" fontFamily="Source Sans Pro">
+                <Typography className="font-[600]" color={colors.grey[100]} variant="h6" fontFamily="Lato">
 
                     Our teams are colla
                     borative, cohesive and able to balance the social, environmental and economic challenges of the different stakeholders to create the right cost, quality and efficiency for our clients.
@@ -38,7 +38,7 @@ const Second = () => {
             </Button>
         </Grid>
         <Grid item xs={12} md={6} className="flex justify-center items-center">
-            <img src="/building.png" alt="" className="h-[300px] w-[100%] md:w-3/4  " />
+            <img src="/building.png" alt="" className="h-[350px] md:h-full w-[100%] md:w-3/4  " />
         </Grid>
     </Grid>
 };

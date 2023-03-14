@@ -11,7 +11,7 @@ const Six = () => {
     return <Grid
         className="px-1 md:px-[80px] py-10 flex justify-center flex-col items-center">
 
-        <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+        <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
             OUR PATNERS AND CLIENTS
         </Typography>
         <Box className="w-[70px] h-[5px]  my-3
@@ -23,7 +23,7 @@ const Six = () => {
                 <Box className="w-[150px] flex flex-col justify-center items-center" key={index}>
 
                     <img src={item.img} alt="" className="w-[100px] h-[100px] max-w-[250px]" />
-                    <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Source Sans Pro">
+                    <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Lato">
                         {item.title}
                     </Typography>
 

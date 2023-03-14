@@ -11,7 +11,7 @@ const Third = () => {
     return <Grid container gap={3}
         className="px-1 md:px-[80px]">
         <Grid item xs={12} md={5.5} className="bg-primary p-4">
-            <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+            <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR MISSION
             </Typography>
 
@@ -22,7 +22,7 @@ const Third = () => {
                 className="h-[60px] flex justify-center items-center" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
                 <img src="/svgs/mission.svg" alt="" className="w-[50px]" />
             </Box>
-            <Typography textAlign="center" fontFamily="Source Sans Pro" className="py-5 font-bold" >
+            <Typography textAlign="center" fontFamily="Lato" className="py-5 font-bold" >
                 To deliver the highest standards in both workmanship, professionalism and value for
                 money & to be the preferred contractor by clients in the building & Construction industry.
             </Typography>
@@ -30,7 +30,7 @@ const Third = () => {
 
         </Grid>
         <Grid item xs={12} md={5.5} className="bg-primary p-4">
-            <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+            <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR VISION
             </Typography>
 
@@ -38,7 +38,7 @@ const Third = () => {
                 backgroundColor: colors.grey[800] + '!important',
 
             }}
-                className="h-[60px] items-center flex justify-center " textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+                className="h-[60px] items-center flex justify-center " textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Lato">
                 <img src="/svgs/vision.svg" alt="" className="w-[50px]" />
             </Box>
             <Typography textAlign="center" fontFamily="Source Sans Pro" className="py-5 font-bold" >

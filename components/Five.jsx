@@ -11,13 +11,13 @@ const Five = () => {
         <Grid item xs={12} md={5} className="relative h-[450px] w-[100%] ">
             <img src="/ex.png" alt="" className="w-full h-full" />
             <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] " >
-                <Typography className="font-semibold text-white  md:pl-[60px]" color={colors.grey[100]} fontFamily="Source Sans Pro">
+                <Typography className="font-semibold text-white  md:pl-[60px]" color={colors.grey[100]} fontFamily="Lato">
                     The health and safety of our staff and property entrusted to us by our clients is of paramount importance to our organization as is looking after the environment in which we operate in to make it better for the communities that live there.
                 </Typography>
             </Box>
         </Grid>
         <Grid item xs={12} md={7} className="p-4 flex-col flex">
-            <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h4" fontFamily="Source Sans Pro">
+            <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR SERVICES
             </Typography>
             <Box className="w-[70px] h-[5px]  my-5
@@ -41,7 +41,7 @@ const Five = () => {
                                 <img src="/ind.png" alt="" className=" w-full" />
                             </div>
                             <div className="bg-black h-1/4">
-                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4">
+                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4" fontFamily="Lato">
                                     Building & construction-
                                     nca registered
                                 </Typography>
@@ -76,7 +76,7 @@ const Five = () => {
                                 <img src="/ind2.png" alt="" className=" w-full" />
                             </div>
                             <div className="bg-black h-1/4">
-                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4">
+                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4" fontFamily="Lato">
                                     General Supplies
                                 </Typography>
                             </div>
