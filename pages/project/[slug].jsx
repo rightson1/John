@@ -35,7 +35,7 @@ const Project = ({ project, preview }) => {
                 <Box className="w-[100px] h-[7px]  my-3 flex justify-center items-start
         "  bgcolor={colors.yellow[500]}></Box>
             </Box>
-            {preview && <PreviewAlert link={'/blogs'} />}
+            {preview && <PreviewAlert link='/blogs' />}
             <div className='w-full flex justify-center  '>
                 <article className='max-w-[900px]'>
                     {router.isFallback ? (
