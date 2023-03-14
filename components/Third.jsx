@@ -9,8 +9,9 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 const Third = () => {
     const { colors } = useGlobalProvider();
     return <Grid container gap={3}
-        className="px-1 md:px-[80px]">
-        <Grid item xs={12} md={5.5} className="bg-primary p-4">
+        className="px-1 md:px-[80px] relative ">
+        <img src="/bg.png" alt="" className="absolute   md:w-screen h-[130vh] -top-[350px] left-0  z-[1]" />
+        <Grid item xs={12} md={5.5} className="bg-primary p-4  z-[4]">
             <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR MISSION
             </Typography>
@@ -29,7 +30,7 @@ const Third = () => {
 
 
         </Grid>
-        <Grid item xs={12} md={5.5} className="bg-primary p-4">
+        <Grid item xs={12} md={5.5} className="bg-primary p-4 z-[4]">
             <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR VISION
             </Typography>

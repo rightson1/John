@@ -35,7 +35,7 @@ const Project = ({ project, preview }) => {
                 <Box className="w-[100px] h-[7px]  my-3 flex justify-center items-start
         "  bgcolor={colors.yellow[500]}></Box>
             </Box>
-            {preview && <PreviewAlert />}
+            {preview && <PreviewAlert link={'/blogs'} />}
             <div className='w-full flex justify-center  '>
                 <article className='max-w-[900px]'>
                     {router.isFallback ? (
@@ -81,8 +81,8 @@ export const getStaticProps = async ({ params, preview = false }) => {
 
 export const getStaticPaths = async () => {
     const response = await client.getEntries({ content_type: 'projects' })
-    const paths = response.items.map(item => ({
-        params: { slug: item.fields.slug }
+    const paths = response?.items?.map(item => ({
+        params: { slug: item?.fields?.slug }
     }))
 
     return {

@@ -22,8 +22,6 @@ import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import Link from 'next/link';
 export default function TemporaryDrawer() {
     const { open, setOpen, colors } = useGlobalProvider()
-    const { admin, logout } = useAuth()
-
     const router = useRouter()
 
     const toggleDrawer = (click) => (event) => {

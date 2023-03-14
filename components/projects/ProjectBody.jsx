@@ -5,7 +5,7 @@ const ProjectBody = ({ project }) => {
 
     return (
 
-        <div className='max-w-none prose my-5'>
+        <div className=' prose my-5 px-5'>
             <RichText content={content} />
         </div>
     )

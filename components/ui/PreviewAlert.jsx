@@ -3,7 +3,7 @@ import { Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
-const PreviewAlert = () => {
+const PreviewAlert = ({ link }) => {
     const [show, setShow] = useState(true)
 
     return (
@@ -29,7 +29,7 @@ const PreviewAlert = () => {
                                     <div className='flex-1'>
                                         This is page is a preview.{' '}
                                         <Link
-                                            href='/api/exit-preview'
+                                            href={link}
                                             className='underline hover:text-cyan duration-200 transition-colors'
                                         >
                                             Click here

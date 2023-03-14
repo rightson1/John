@@ -42,7 +42,7 @@ const Footer = () => {
 
     }
     const { colors } = useGlobalProvider()
-    return <Grid className='text-white'
+    return <Grid className='text-white md:px-20 '
         sx={{
             pb: {
                 xs: 8,
@@ -50,6 +50,7 @@ const Footer = () => {
                 md: 2,
             }
         }}
+        spacing={6}
 
         container bgcolor={colors.grey[100]}>
         <Grid item xs={12} sx={{
@@ -57,15 +58,15 @@ const Footer = () => {
                 xs: 'none',
                 md: 'flex'
             }
-        }} md={4} className=" flex-col md:flex-row justify-center items-center p-4 gap-4 py-[100px]">
-            <img src="/asset.png" alt="" className="max-w-[150px] max-h-[100px] " />
-            <Typography className="py-2 text-white  px-4" textAlign="center" color={colors.grey[100]} variant="body1" fontFamily="Lato">
+        }} md={4} className=" flex-col md:flex-row justify-center items-center p-4 gap-2 py-[100px]">
+            <img src="/flogo.svg" alt="" className="max-w-[150px] max-h-[130px] " />
+            <Typography className="py-2 text-white  px-2 text-[10px]" textAlign="center" color={colors.grey[100]} variant="body1" fontFamily="Lato">
                 John Lee Miller Limited is a fast growing
                 Building and Construction company working towards being a world class contractor.
             </Typography>
         </Grid>
-        <Grid item xs={12} md={5} className="flex flex-col md:flex-row justify-center items-center p-4 gap-4  ">
-            <Box className="flex flex-col justify-center items-start">
+        <Grid item xs={12} md={5} className="flex flex-col md:flex-row justify-start items-start  gap-4  ">
+            <Box className="flex flex-col justify-start items-start ">
                 <div className="flex flex-col pl-5">
                     <Typography className="font-semibold text-white " color={colors.grey[100]} variant="h6" fontFamily="Lato">
                         Quick Links
@@ -110,7 +111,7 @@ const Footer = () => {
                 })}
 
             </Box>
-            <Box className="flex-1 w-full  flex flex-col gap-2">
+            <Box className="flex-1 w-full  flex flex-col gap-2 mt-10">
                 <Typography className="font-semibold text-white" color={colors.grey[100]} variant="h6" fontFamily="Lato">
                     Subscribe to our Newsletter
                 </Typography>
@@ -123,7 +124,7 @@ const Footer = () => {
                 </div>
             </Box>
         </Grid>
-        <Grid item xs={12} md={3} className="flex  justify-center items-center px-5">
+        <Grid item xs={12} md={3} className="flex  justify-center items-start mt-10 px-5">
             <Button
                 className="uppercase rounded-none py-3   text-black flex items-center w-full"
                 sx={{

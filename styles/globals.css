@@ -43,6 +43,13 @@ body {
   background-repeat: no-repeat;
 }
 
+.pattern {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(../public/bg.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
 .partner {
   background: url(../public/partner.jpg);
   background-position: right;

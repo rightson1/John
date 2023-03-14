@@ -47,11 +47,7 @@ const nav = [{
 ]
 function Navbar() {
     const router = useRouter()
-    const { logout, admin, signInWithGoogle } = useAuth();
-    const [anchorEl, setAnchorEl] = useState(null);
-    const isOpen = Boolean(anchorEl);
-    const handleClick = (event) => setAnchorEl(event.currentTarget);
-    const handleClose = () => setAnchorEl(null);
+    const path = router.pathname;
     const { colors, setOpen } = useGlobalProvider()
     const handleOpenNavMenu = (event) => {
         setOpen(true)
@@ -137,8 +133,8 @@ function Navbar() {
                                 <Link href={`/${item.link}`} key={index}>
                                     <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
                                         sx={{
-                                            bgcolor: item.link == "/" && colors.black[100] + '!important',
-                                            color: item.link == "/" && colors.yellow[500] + '!important',
+                                            bgcolor: item.link == path && colors.black[100] + '!important',
+                                            color: item.link == path && colors.yellow[500] + '!important',
 
                                         }}
                                     >

@@ -41,11 +41,7 @@ const nav = [{
 ]
 function HomeNav() {
     const router = useRouter()
-    const { logout, admin, signInWithGoogle } = useAuth();
     const [anchorEl, setAnchorEl] = useState(null);
-    const isOpen = Boolean(anchorEl);
-    const handleClick = (event) => setAnchorEl(event.currentTarget);
-    const handleClose = () => setAnchorEl(null);
     const { colors, setOpen } = useGlobalProvider()
     const handleOpenNavMenu = (event) => {
         setOpen(true)

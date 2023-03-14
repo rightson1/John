@@ -19,9 +19,9 @@ const Post = ({ post, preview }) => {
             </div>
 
 
-            {preview && <PreviewAlert />}
+            {preview && <PreviewAlert link={'/projects'} />}
             <div className='w-full flex justify-center  px-10'>
-                <article className='max-w-[900px]'>
+                <article className='max-w-3/4 max-w-[900px]'>
                     {router.isFallback ? (
                         <Skeleton />
                     ) : (
