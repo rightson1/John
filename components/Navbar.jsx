@@ -6,14 +6,6 @@ import Container from '@mui/material/Container';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import { useGlobalProvider } from "../utils/themeContext";
 import { useRouter } from 'next/router'
-import { useAuth } from '../utils/authContext';
-import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
@@ -21,7 +13,7 @@ import { Typography } from '@mui/material';
 import Link from 'next/link';
 const nav = [{
     name: 'Home',
-    link: '/'
+    link: '/home'
 },
 {
     name: 'About Us ',
@@ -47,7 +39,7 @@ const nav = [{
 ]
 function Navbar() {
     const router = useRouter()
-    const path = router.pathname;
+    const path = router.pathname.split('/')[1]
     const { colors, setOpen } = useGlobalProvider()
     const handleOpenNavMenu = (event) => {
         setOpen(true)
@@ -133,8 +125,8 @@ function Navbar() {
                                 <Link href={`${item.link}`} key={index}>
                                     <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
                                         sx={{
-                                            bgcolor: item.link == path && colors.black[100] + '!important',
-                                            color: item.link == path && colors.yellow[500] + '!important',
+                                            bgcolor: item.link.split('/')[1] == path && colors.black[100] + '!important',
+                                            color: item.link.split('/')[1] == path && colors.yellow[500] + '!important',
 
                                         }}
                                     >

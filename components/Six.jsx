@@ -9,7 +9,7 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 const Six = () => {
     const { colors } = useGlobalProvider();
     return <Grid
-        className="px-1 md:px-[80px] py-10 flex justify-center flex-col items-center">
+        className="px-1 md:px-[80px] flex justify-center flex-col items-center py-20">
 
         <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
             OUR PATNERS AND CLIENTS

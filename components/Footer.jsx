@@ -42,7 +42,7 @@ const Footer = () => {
 
     }
     const { colors } = useGlobalProvider()
-    return <Grid className='text-white md:px-20 '
+    return <Grid className='text-white md:px-20 llg:px-[110px]'
         sx={{
             pb: {
                 xs: 8,
