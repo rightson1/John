@@ -1,10 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
 import Typography from '@mui/material/Typography';
 import { useGlobalProvider } from "../../utils/themeContext";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -52,14 +48,14 @@ const Projects = ({ posts }) => {
         <div className="flex items-center justify-center p-5 md:p-10">
             <Grid container spacing={2}>
                 {displayedPosts.map((item) => {
-                    const { name, image, slug, excerpt, date, coverImage } = item.fields
+                    const { projectName, image, slug, excerpt, date, coverImage } = item.fields
                     return <Grid item xs={12} md={6} key={item}>
                         <div className="flex flex-col items-center justify-center p-5">
                             <div className="flex flex-col items-center justify-center p-5">
                                 <img src={coverImage.fields.file.url} alt="" className="w-full min-h-[300px] max-h-[350px] object-cover " />
                                 <div className="flex flex-col items-center justify-center py-5">
-                                    <Typography variant="h3" textAlign="left" fontFamily="Hec" className=" text-black font-[900]  self-start" >
-                                        {name}
+                                    <Typography variant="h3" textAlign="left" fontFamily="Hec" className=" text-black font-[900]  self-start capitalize" >
+                                        {projectName}
                                     </Typography>
                                     <div className="flex w-full py-5">
                                         <Divider flexItem width="100%" sx={{ borderBottomWidth: 2 }} />
@@ -68,10 +64,10 @@ const Projects = ({ posts }) => {
                                     <Typography variant="body1" fontFamily="Nunito" className=" text-black  " >
                                         {excerpt}
                                     </Typography>
-                                    <Link href={`/projects/${slug}`}>
+                                    <Link href={`/projects/${projectName}`}>
                                         <a className="flex items-center justify-center self-start">
                                             <Typography variant="h1" fontFamily="Hec" className=" text-black font-[900] text-xl" >
-                                                Read More
+                                                View Projects
                                             </Typography>
                                             <ArrowRightAltIcon className="text-black text-3xl" />
                                         </a>
@@ -94,13 +90,13 @@ const Projects = ({ posts }) => {
                 onChange={handlePageChange}
             />
         </div>
-    </div >;
+    </div>;
 };
 
 Projects.layout = true;
 
 export const getStaticProps = async () => {
-    const response = await client.getEntries({ content_type: 'projects' })
+    const response = await client.getEntries({ content_type: 'projectType' })
 
     return {
         props: {

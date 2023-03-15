@@ -1,7 +1,7 @@
 import ProjectBody from '../../components/projects/ProjectBody'
 import ProjectHeader from '../../components/projects/ProjectHeader'
-import PreviewAlert from '../../components/ui/PreviewAlert'
-import Skeleton from '../../components/ui/Skeleton'
+import PreviewAlert from '../ui/PreviewAlert'
+import Skeleton from '../ui/Skeleton'
 import { client, previewClient } from '../../lib/client'
 import { useRouter } from 'next/router'
 import Divider from '@mui/material/Divider';
@@ -35,7 +35,7 @@ const Project = ({ project, preview }) => {
                 <Box className="w-[100px] h-[7px]  my-3 flex justify-center items-start
         "  bgcolor={colors.yellow[500]}></Box>
             </Box>
-            {preview && <PreviewAlert link="/projects" />}
+            {preview && <PreviewAlert />}
             <div className='w-full flex justify-center  '>
                 <article className='max-w-[900px]'>
                     {router.isFallback ? (
@@ -81,8 +81,8 @@ export const getStaticProps = async ({ params, preview = false }) => {
 
 export const getStaticPaths = async () => {
     const response = await client.getEntries({ content_type: 'projects' })
-    const paths = response?.items?.map(item => ({
-        params: { slug: item?.fields?.slug }
+    const paths = response.items.map(item => ({
+        params: { slug: item.fields.slug }
     }))
 
     return {

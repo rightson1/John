@@ -20,7 +20,7 @@ const Projects = ({ posts }) => {
     const { colors, isMobile, isMedium } = useGlobalProvider()
     const [page, setPage] = useState(1);
     const [blogsPerPage, setBlogsPerPage] = useState(10);
-    const totalBlogs = posts.length;
+    const totalBlogs = posts?.length;
     const router = useRouter();
     const { project } = router.query
     useEffect(() => {
@@ -33,7 +33,7 @@ const Projects = ({ posts }) => {
 
     const startIndex = (page - 1) * blogsPerPage;
     const endIndex = startIndex + blogsPerPage;
-    const displayedPosts = posts.slice(startIndex, endIndex);
+    const displayedPosts = posts?.slice(startIndex, endIndex);
     return <div className="w-full min-h-screen">
         <div className="flex h-[40vh] hero justify-center align-center items-center flex-col">
 
@@ -104,17 +104,26 @@ Projects.layout = true;
 
 export const getStaticProps = async () => {
     const response = await client.getEntries({ content_type: 'projects' })
-
-    return {
-        props: {
-            posts: response.items,
-            revalidate: 60
+    if (!response?.items?.length) {
+        return {
+            redirect: {
+                destination: '/projects',
+                permanent: false
+            }
+        }
+    } else if (response?.items?.length) {
+        return {
+            props: {
+                posts: response.items
+            },
+            revalidate: 1
         }
     }
+
+
 }
 export const getStaticPaths = async () => {
     const response = await client.getEntries({ content_type: 'projectType' });
-    console.log(response.items)
     const paths = response.items.map(item => ({
         params: { project: item.fields.slug }
     }))

@@ -130,7 +130,7 @@ function Navbar() {
                     <div className="flex gap-3 bg-white shadow-md">
                         {
                             nav.map((item, index) =>
-                                <Link href={`/${item.link}`} key={index}>
+                                <Link href={`${item.link}`} key={index}>
                                     <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
                                         sx={{
                                             bgcolor: item.link == path && colors.black[100] + '!important',
