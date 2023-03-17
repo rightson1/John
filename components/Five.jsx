@@ -48,11 +48,13 @@ const Five = () => {
             </Box>
         </Grid>
         <Grid item xs={12} md={7} className="p-4 flex-col flex">
-            <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h4" fontFamily="Hec">
-                OUR SERVICES
-            </Typography>
-            <Box className="w-[70px] h-[5px]  my-5
+            <div className="flex flex-col pl-[60px] my-7">
+                <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h2" fontFamily="Hec">
+                    OUR SERVICES
+                </Typography>
+                <Box className="w-[70px] h-[5px]  mb-3
         "  bgcolor={colors.yellow[500]}></Box>
+            </div>
             <div className="flex">
                 <Button
                     sx={{

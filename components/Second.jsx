@@ -7,26 +7,26 @@ import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 const Second = () => {
     const { colors } = useGlobalProvider();
     return <Grid container
-        className="p-[90px] px-10 md:px-[80px] lg:px-[100px] llg:px-[120px]">
-        <Grid item xs={12} md={6} spacing={2} className="md:py-10">
-            <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
+        className="p-[90px] pt-[200px] px-10 md:px-[140px] lg:px-[150px] llg:px-[200px] ">
+        <Grid item xs={12} md={6} spacing={2} className="">
+            <Typography className="font-semibold" color={colors.grey[100]} variant="h2" fontFamily="Hec">
                 ABOUT US
             </Typography>
             <Box className="w-[70px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
             <div className="flex gap-3 flex-col">
-                <Typography color={colors.grey[100]} variant="h6" fontFamily="Lato" className="font-[600]">
+                <Typography color={colors.grey[100]} variant="h6" fontFamily="Lato" className="font-[600] text-[13px]">
                     John Lee Miller Limited is a fast growing Building and Construction company working towards being a world class contractor. Through commitment to improvements we are continuously seeking waste elimination, driving up quality of our services and maximizing value to for clients.
 
                 </Typography>
-                <Typography className="font-[600]" color={colors.grey[100]} variant="h6" fontFamily="Lato">
+                <Typography className="font-[600] text-[13px]" color={colors.grey[100]} variant="h6" fontFamily="Lato">
 
                     Our teams are colla
                     borative, cohesive and able to balance the social, environmental and economic challenges of the different stakeholders to create the right cost, quality and efficiency for our clients.
                 </Typography>
             </div>
             <Button
-                className="uppercase rounded-none py-3  w-[130px] text-black flex items-center"
+                className="uppercase rounded-none py-3  w-[160px] text-black flex items-center "
                 sx={{
                     bgcolor: colors.yellow[500] + '!important',
                     color: colors.grey[100] + '!important',
@@ -34,11 +34,13 @@ const Second = () => {
                 }}
             >
                 <RemoveRedEyeOutlinedIcon className="mr-2" />
-                View Profile
+                <Typography fontFamily="Hec">
+                    View Profile
+                </Typography>
             </Button>
         </Grid>
         <Grid item xs={12} md={6} className="flex justify-center items-center">
-            <img src="/building.png" alt="" className="h-[350px] md:h-full w-[100%] md:w-3/4  " />
+            <img src="/building.png" alt="" className="h-[300px] md:h-[350px] w-[100%] md:w-3/4  " />
         </Grid>
     </Grid>
 };

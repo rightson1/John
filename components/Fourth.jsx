@@ -9,22 +9,22 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 const Fourth = () => {
     const { colors } = useGlobalProvider();
     return <Grid container gap={3}
-        className="px-1 md:px-[80px] py-10">
+        className="px-1 md:px-[80px]  lg:px-[100px] llg:px-[120px] py-10 -mt-[100px]">
         <Grid item xs={12} md={5.5} className=" p-4" sx={{
 
         }}>
-            <img src="/machine.png" alt="" className="h-[400px] md:h-full w-[100%] " />
+            <img src="/machine.png" alt="" className="h-[400px] md:h-full w-[100%]  object-coverr" />
         </Grid>
-        <Grid item xs={12} md={5.5} className="p-4 flex-col gap-4 flex">
-            <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
+        <Grid item xs={12} md={5.5} className="p-4 flex-col gap-1 flex">
+            <Typography className="font-semibold" color={colors.grey[100]} variant="h2" fontFamily="Hec">
                 WHAT WE STAND BY
             </Typography>
-            <Box className="w-[70px] h-[5px]  my-3
+            <Box className="w-[70px] h-[5px]  my-2
         "  bgcolor={colors.yellow[500]}></Box>
             <div className="flex flex-col">
 
                 <div className="flex items-center gap-2">
-                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Lato">
+                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                         01.
                     </Typography>
                     <Box className="flex-1 h-[20px]  my-3
@@ -40,7 +40,7 @@ const Fourth = () => {
             <div className="flex flex-col">
 
                 <div className="flex items-center gap-2">
-                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Lato">
+                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                         02.
                     </Typography>
                     <Box className="flex-1 h-[20px]  my-3
@@ -57,7 +57,7 @@ const Fourth = () => {
             <div className="flex flex-col">
 
                 <div className="flex items-center gap-2">
-                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Lato">
+                    <Typography className="font-semibold" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                         03.
                     </Typography>
                     <Box className="flex-1 h-[20px]  my-3

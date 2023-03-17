@@ -53,7 +53,7 @@ const Blogs = ({ posts }) => {
         <div className="flex items-center justify-center p-5 md:p-10">
             <ImageList variant="masonry" cols={isMobile ? 1 : isMedium ? 2 : 3} gap={isMobile ? 8 : 20} sx={{ width: '100%' }}>
                 {displayedPosts.map((item) => {
-                    const { title, image, slug, excerpt, author, date, coverImage } = item.fields
+                    const { title, slug, coverImage } = item.fields
 
                     return (
                         <ImageListItem key={item.img}>

@@ -13,7 +13,7 @@ import { Typography } from '@mui/material';
 import Link from 'next/link';
 const nav = [{
     name: 'Home',
-    link: '/home'
+    link: '/'
 },
 {
     name: 'About Us ',

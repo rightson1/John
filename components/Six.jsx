@@ -9,15 +9,15 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 const Six = () => {
     const { colors } = useGlobalProvider();
     return <Grid
-        className="px-1 md:px-[80px] flex justify-center flex-col items-center py-20">
+        className="px-1 md:px-[80px] flex justify-center flex-col items-center py-20 -mt-[100px]">
 
-        <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
+        <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h2" fontFamily="Hec">
             OUR PATNERS AND CLIENTS
         </Typography>
         <Box className="w-[100px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
 
-        <Box className="flex flex-wrap justify-center items-start">
+        <Box className="flex flex-wrap justify-center items-start my-7">
 
             {list.map((item, index) => (
                 <Box className="w-[200px] flex flex-col justify-center items-center" key={index}>
