@@ -15,13 +15,13 @@ const PostHeader = ({ post }) => {
                 <img src={url} alt="" />
             </Grid>
             <Grid item xs={12} md={6} className="flex flex-col gap-3 justify-center">
-                <Typography variant='h1' fontFamily="Hec">
+                <Typography variant='h1' fontFamily="Lato" fontWeight={500}>
                     {title}
                 </Typography>
-                <Typography variant='h5' fontFamily="Hec">
+                <Typography variant='h5' fontFamily="Lato">
                     by {name}
                 </Typography>
-                <Typography variant='body1' fontFamily="Hec" className='flex justify-between'>
+                <Typography variant='body1' fontFamily="Lato" className='flex justify-between'>
                     <DateComponent dateString={date} className='text-sm text-gray-400' />
                     <span className='italic'>
                         {format(date)}

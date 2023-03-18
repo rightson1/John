@@ -9,18 +9,21 @@ const Contact = () => {
     return <Box container gap={2} className="min-h-[120vh] z-[3] relative flex  items-center w-full"
 
     >
+        <div className="absolute top-0 left-0  z-[2] h-screen w-screen">
+            <img src="/bg.png" alt="" className="w-full h-full object-cover" />
+        </div>
 
         <div className="flex justify-center  pl-5 md:pl-10 lg:pl-[200px] p">
-            <Box className=" min-h-[400px] w-[90vw] md:w-[400px] z-[7] bg-black px-5 py-10 flex flex-col gap-2"
+            <Box className=" min-h-[400px] w-[90vw] md:w-[400px] z-[7] bg-black px-5 py-10 flex flex-col gap-1 -mb-2"
 
             >
-                <Typography variant="h3" fontFamily="Hec" className=" text-white font-[900]  " >
-                    DROP US A
+                <Typography variant="h3" fontFamily="Hec" className=" text-white font-[900]   " >
+                    DROP US A LINE
                 </Typography>
 
-                <Box className="w-[100px] h-[7px]  my-3 flex justify-center items-start
+                <Box className="w-[150px] h-[7px]  my-1 flex justify-center items-start
         "  bgcolor={colors.yellow[500]}></Box>
-                <Typography variant="body1" fontFamily="Lato" className=" text-white text-xl" >
+                <Typography variant="body1" fontFamily="Lato" className=" text-white text-xl my-3" >
                     We value what you have to say leave us a message
                 </Typography>
                 <div className="flex gap-4 flex-col">
@@ -47,7 +50,7 @@ const Contact = () => {
 
 
         </div>
-        <Box className="absolute bg-black h-[65%]  w-screen top-0 z-[1]"
+        <Box className="absolute bg-black h-[65%]  w-screen top-0 z-[1] "
             sx={{
                 background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url("/wood.png")',
 

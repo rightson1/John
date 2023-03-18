@@ -44,6 +44,7 @@ const Project = ({ project, preview }) => {
                             <ProjectBody project={project} />
                         </>
                     )}
+
                 </article>
             </div>
         </section>

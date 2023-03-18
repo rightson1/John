@@ -5,13 +5,14 @@ import { useGlobalProvider } from "../utils/themeContext";
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 import { motion } from "framer-motion";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import Link from "next/link";
 const Five = () => {
     const { colors } = useGlobalProvider();
     const item = (image, text) => {
         console.log(text)
 
         return (
-            <Box className="card flex flex-col  h-[350px]  transition transition-all duration-500 ease-in-out  cursor-pointer"
+            <Box className="card flex flex-col  h-[350px]  transition transition-all duration-500 ease-in-out  cursor-pointer" id="services"
                 sx={{
                     "&:hover": {
                         "& .hov": {
@@ -25,11 +26,18 @@ const Five = () => {
                     <img src={image} alt="" className=" w-full" />
                 </div>
                 <Box className="bg-black h-1/4 relative hov transition ease-in-out duration-500 ">
-                    <motion.div className="h-[50px] absolute -top-[50px] w-full bg-[#fff200] z-[5] cursor-pointer flex justify-center items-center opacity-0 hov">
-                        <Typography fontFamily="Lato">    Learn More</Typography>
-                        <ArrowRightAltIcon className="ml-2" />
+                    <Link href="/contact">
+                        <motion.div className="h-[50px] absolute -top-[50px] w-full bg-[#fff200] z-[5] cursor-pointer flex justify-center items-center opacity-0 hov">
 
-                    </motion.div>
+                            <Typography fontFamily="Lato">   Contact Us
+
+
+                            </Typography>
+
+                            <ArrowRightAltIcon className="ml-2" />
+
+                        </motion.div>
+                    </Link>
                     <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4" fontFamily="Lato">
                         {text}
                     </Typography>
@@ -69,17 +77,7 @@ const Five = () => {
                 </Button>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6} className="flex  flex-col">
-                        {/* <div className="card flex flex-col  h-[350px] ">
-                            <div className="w-full  overflow-hidden">
-                                <img src="/ind.png" alt="" className=" w-full" />
-                            </div>
-                            <div className="bg-black h-1/4 ">
-                                <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4" fontFamily="Lato">
-                                    Building & construction-
-                                    nca registered
-                                </Typography>
-                            </div>
-                        </div> */}
+
                         {item("/ind.png", "Building & construction- nca registered")}
                         <Button className="w-[200px] self-center mt-2  items-center gap-1" sx={{
                             color: "black",

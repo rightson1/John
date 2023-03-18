@@ -17,7 +17,7 @@ import Grid from '@mui/material/Grid';
 const Projects = ({ posts }) => {
     const { colors, isMobile, isMedium } = useGlobalProvider()
     const [page, setPage] = useState(1);
-    const [blogsPerPage, setBlogsPerPage] = useState(10);
+    const [blogsPerPage, setBlogsPerPage] = useState(4);
     const totalBlogs = posts.length;
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Projects = ({ posts }) => {
             <Divider flexItem width="100%" sx={{ borderBottomWidth: 5 }} />
         </div>
 
-        <div className="flex items-center justify-center p-5 md:p-10">
+        <div className="flex items-center justify-center p-5 md:p-10 flex-col pb-10">
             <Grid container spacing={2}>
                 {displayedPosts.map((item) => {
                     const { name, image, slug, excerpt, date, coverImage } = item.fields
@@ -58,22 +58,24 @@ const Projects = ({ posts }) => {
                             <div className="flex flex-col items-center justify-center p-5">
                                 <img src={coverImage.fields.file.url} alt="" className="w-full min-h-[300px] max-h-[350px] object-cover " />
                                 <div className="flex flex-col items-center justify-center py-5">
-                                    <Typography variant="h3" textAlign="left" fontFamily="Hec" className=" text-black font-[900]  self-start" >
+                                    <Typography variant="h3" textAlign="left" fontFamily="Lato" className=" text-black font-[900]  self-start" >
                                         {name}
                                     </Typography>
                                     <div className="flex w-full py-5">
                                         <Divider flexItem width="100%" sx={{ borderBottomWidth: 2 }} />
                                     </div>
 
-                                    <Typography variant="body1" fontFamily="Nunito" className=" text-black  " >
+                                    <Typography variant="body1" fontFamily="Lato" className=" text-black  " >
                                         {excerpt}
                                     </Typography>
                                     <Link href={`/projects/${slug}`}>
-                                        <a className="flex items-center justify-center self-start">
-                                            <Typography variant="h1" fontFamily="Hec" className=" text-black font-[900] text-xl" >
-                                                Read More
+                                        <a className="flex items-center justify-center self-start  gap-2">
+                                            <Typography variant="h4" fontFamily="Lato" className=" text-black font-[700] text-xl" >
+                                                Learn  More
                                             </Typography>
-                                            <ArrowRightAltIcon className="text-black text-3xl" />
+                                            <ArrowRightAltIcon className=" text-4xl pt-1" sx={{
+                                                color: colors.yellow[500] + " !important"
+                                            }} />
                                         </a>
                                     </Link>
                                 </div>
@@ -84,17 +86,17 @@ const Projects = ({ posts }) => {
 
                 })}
             </Grid>
-
+            <div className="flex w-full p-5 justify-center">
+                <Pagination
+                    count={Math.ceil(totalBlogs / blogsPerPage)}
+                    page={page}
+                    onChange={handlePageChange}
+                />
+            </div>
 
         </div>
-        <div className="flex w-full p-5 justify-center">
-            <Pagination
-                count={Math.ceil(totalBlogs / blogsPerPage)}
-                page={page}
-                onChange={handlePageChange}
-            />
-        </div>
-    </div >;
+
+    </div>;
 };
 
 Projects.layout = true;
