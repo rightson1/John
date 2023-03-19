@@ -18,8 +18,7 @@ const Five = () => {
             scroll.current?.scrollIntoView({ behavior: "smooth" });
             setSection("");
         }
-    });
-
+    }, [section]);
     const Item = ({ image, text }) => {
         return (
             <Box className="card flex flex-col  h-[350px] w-full    cursor-pointer" id="services"

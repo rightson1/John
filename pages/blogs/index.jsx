@@ -48,11 +48,11 @@ const Blogs = ({ posts }) => {
 
         <div className="flex items-center justify-center p-5 md:p-10 flex-col mb-10">
             <Grid container sx={{ width: '100%' }} spacing={2}>
-                {displayedPosts.map((item) => {
+                {displayedPosts.map((item, index) => {
                     const { title, slug, coverImage } = item.fields
 
                     return (
-                        <Grid item xs={12} md={6} lg={4} key={item.img} className="">
+                        <Grid item xs={12} md={6} lg={4} key={index} className="">
                             <Link href={`/blogs/${slug}`}>
                                 <Box className="relative">
                                     <img

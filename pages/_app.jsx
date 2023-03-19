@@ -30,7 +30,7 @@ function MyApp(props) {
       </Head>
       <CacheProvider value={emotionCache}>
         <ThemeProvider>
-          <div className="h-screen w-screen overflow-x-hidden">
+          <div className="h-full  w-screen overflow-visible">
             <Navbar />
             <div className="">
               <Component {...pageProps} />

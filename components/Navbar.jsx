@@ -70,11 +70,10 @@ function Navbar() {
                 }
             }}>
                 <Container maxWidth="xl">
-                    <Toolbar disableGutter
+                    <Toolbar
                         className='flex'>
                         <Box
                             variant="h6"
-                            noWrap
                             component="button"
                             className='flex flex-row items-center gap-4 flex-1 '
                             onClick={() => { router.push('/') }}
@@ -124,8 +123,8 @@ function Navbar() {
                     className="flex justify-center items-center  absolute -bottom-[50px] z-10 w-full">
                     <div className="flex gap-3 bg-white shadow-md">
                         {
-                            nav.map((item, index) =>
-                                !!item.same ?
+                            nav.map((item, index) => {
+                                return (!!item.same ?
                                     <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black" key={index}
                                         onClick={() => {
                                             !path ? setSection(item.same) : router.push(`/#${item.same}`)
@@ -151,7 +150,8 @@ function Navbar() {
                                             {item.name}
 
                                         </Button>
-                                    </Link>
+                                    </Link>)
+                            }
 
 
                             )
@@ -169,11 +169,10 @@ function Navbar() {
                 }
             }}>
                 <Container maxWidth='xl'>
-                    <Toolbar disableGutters
+                    <Toolbar
                         className='flex justify-between'>
                         <Box
                             variant="h6"
-                            noWrap
                             component="button"
                             onClick={() => { router.push('/') }}
                             sx={{
@@ -204,7 +203,6 @@ function Navbar() {
                             color="inherit"
                         >
                             <MenuIcon className="text-black"
-                                onClick={handleOpenNavMenu}
                                 sx={{
                                     color: colors.grey[100],
                                     fontSize: "2.5rem"

@@ -46,9 +46,9 @@ const Projects = ({ posts }) => {
 
         <div className="flex items-center justify-center p-5 md:p-10 flex-col pb-10 ">
             <Grid container spacing={2}>
-                {displayedPosts.map((item) => {
+                {displayedPosts.map((item, index) => {
                     const { name, image, slug, excerpt, date, coverImage } = item.fields
-                    return <Grid item xs={12} md={6} key={item}>
+                    return <Grid item xs={12} md={6} key={index}>
                         <div className="flex flex-col items-center justify-center md:p-5">
                             <div className="flex flex-col items-center justify-center md:p-5">
                                 <img src={coverImage.fields.file.url} alt="" className="w-full min-h-[300px] max-h-[350px] object-cover " />

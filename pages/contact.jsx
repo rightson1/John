@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 const Contact = () => {
     const { colors } = useGlobalProvider();
 
-    return <Box container gap={2} className="min-h-[120vh] z-[3] relative flex  items-center w-full"
+    return <Box gap={2} className="min-h-[120vh] z-[3] relative flex  items-center w-full"
 
     >
         <div className="absolute top-0 left-0  z-[2] h-screen w-screen">

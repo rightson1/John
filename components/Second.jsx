@@ -9,15 +9,14 @@ import { useRouter } from "next/router";
 const Second = () => {
     const router = useRouter();
     const { colors, section, setSection } = useGlobalProvider();
-    const path = router.pathname
-    console.log(path)
+
     const scroll = useRef();
     useEffect(() => {
         if (section === "about") {
             scroll.current?.scrollIntoView({ behavior: "smooth" });
             setSection("");
         }
-    });
+    }, [section]);
 
     return <Grid container rowSpacing={5} id="about"
         className="p-[90px] md:pt-[200px] px-5 md:px-[140px] lg:px-[150px] llg:px-[200px] ">

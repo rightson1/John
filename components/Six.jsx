@@ -15,7 +15,7 @@ const Six = () => {
         <Box className="flex flex-wrap justify-center items-start my-7 ">
 
             {list.map((item, index) => (
-                <Box className="w-[45%]  md:w-[200px] flex flex-col justify-center items-center mt-2" key={index}>
+                <Box className="w-[45%]  md:w-[200px] flex flex-col justify-center items-center mt-2" key={item.title}>
 
                     <img src={item.img} alt="" className="w-[100px] h-[100px] max-w-[250px]" />
                     <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Lato">

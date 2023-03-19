@@ -12,14 +12,10 @@ import { tokens, themeSettings } from "./theme";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider as Theme } from "@mui/material/styles";
 import { CssBaseline, useMediaQuery } from "@mui/material";
-import { useRouter } from "next/router";
-import { baseUrl } from "./url";
-
 const ThemeContext = createContext();
 
 
 export const ThemeProvider = ({ children }) => {
-    const router = useRouter()
 
     const initialState = useMemo(() => {
         return {

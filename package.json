@@ -24,7 +24,6 @@
         "contentful": "^9.3.3",
         "cross-env": "^7.0.3",
         "firebase": "^9.16.0",
-        "framer-motion": "^8.5.3",
         "next": "^12.3.0",
         "node-fetch": "^3.3.0",
         "postcss": "^8.4.16",

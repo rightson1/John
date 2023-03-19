@@ -53,7 +53,7 @@ export default function TemporaryDrawer() {
 
 
                         return (
-                            <>
+                            <Box key={index}>
                                 {!!item.same ? (
                                     <ListItemButton className='py-5'
 
@@ -78,7 +78,7 @@ export default function TemporaryDrawer() {
                                 )
 
                                 }
-                            </>
+                            </Box>
                         )
 
                     })
