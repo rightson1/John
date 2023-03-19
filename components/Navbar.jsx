@@ -160,58 +160,59 @@ function Navbar() {
 
                 </Box>
             </AppBar>
-            <AppBar position="static" sx={{
+            <Box className="justify-betwe" position="static" sx={{
                 background: 'inherit',
+
                 boxShadow: 'none',
                 display: {
                     xs: 'flex',
                     md: 'none'
                 }
             }}>
-                <Container maxWidth='xl'>
-                    <Toolbar
-                        className='flex justify-between'>
-                        <Box
-                            variant="h6"
-                            component="button"
-                            onClick={() => { router.push('/') }}
+
+                <Box
+                    className='flex justify-between w-full py-1 px-5'>
+                    <Box
+                        variant="h6"
+                        component="button"
+                        onClick={() => { router.push('/') }}
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'flex' },
+                            fontFamily: 'Lato',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: colors.grey[100],
+                            textDecoration: 'none',
+                            fontSize: {
+                                xs: '1.8rem',
+                            },
+
+                        }}
+                    >
+                        {/* JLM */}
+                        <img src="/logo.png" className='w-[50px] rounded-full' alt="" />
+                        {/* <img src="/logo.svg" className='w-[40px]' alt="" /> */}
+                    </Box>
+
+                    <IconButton
+                        size="large"
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleOpenNavMenu}
+                        color="inherit"
+                    >
+                        <MenuIcon className="text-black"
                             sx={{
-                                mr: 2,
-                                display: { xs: 'flex', md: 'flex' },
-                                fontFamily: 'Lato',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
                                 color: colors.grey[100],
-                                textDecoration: 'none',
-                                fontSize: {
-                                    xs: '1.8rem',
-                                },
+                                fontSize: "2.5rem"
+                            }} />
+                    </IconButton>
 
-                            }}
-                        >
-                            {/* JLM */}
-                            <img src="/logo.png" className='w-[50px] rounded-full' alt="" />
-                            {/* <img src="/logo.svg" className='w-[40px]' alt="" /> */}
-                        </Box>
+                </Box>
 
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                            <MenuIcon className="text-black"
-                                sx={{
-                                    color: colors.grey[100],
-                                    fontSize: "2.5rem"
-                                }} />
-                        </IconButton>
-
-                    </Toolbar>
-                </Container>
-            </AppBar>
+            </Box>
 
         </Box >
     );
