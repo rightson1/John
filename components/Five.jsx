@@ -79,12 +79,16 @@ const Five = () => {
 
             <Box
                 sx={{
+                    "& .swiper-pagination-bullet": {
+                        bgcolor: {
+                            sm: 'white',
+                            md: 'black'
+                        }
+                    },
                     "& .swiper-pagination-bullet-active": {
                         backgroundColor: colors.yellow[500]
                     },
-                    "& .swiper-pagination-bullet": {
-                        bgcolor: colors.yellow[500],
-                    },
+
                     "& .swiper-button-next": {
                         color: colors.yellow[500],
 
