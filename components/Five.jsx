@@ -13,12 +13,12 @@ const Five = () => {
     const scroll = useRef();
     const sliderRef = useRef(null);
 
-    // useEffect(() => {
-    //     if (section === "services") {
-    //         scroll.current?.scrollIntoView({ behavior: "smooth" });
-    //         setSection("");
-    //     }
-    // }, [section]);
+    useEffect(() => {
+        if (section === "services") {
+            scroll.current?.scrollIntoView({ behavior: "smooth" });
+            setSection("");
+        }
+    }, [section]);
     const Item = ({ image, text }) => {
         return (
             <Box className="card flex flex-col  h-[350px] w-full    cursor-pointer" id="services"

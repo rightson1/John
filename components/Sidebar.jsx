@@ -19,13 +19,7 @@ export default function TemporaryDrawer() {
     const router = useRouter();
     const path = router.pathname.split('/')[1]
 
-    const toggleDrawer = (click) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
 
-        setOpen(click);
-    };
 
     const list = () => (
 
@@ -35,8 +29,7 @@ export default function TemporaryDrawer() {
                 pb: 5,
             }}
             role="presentation"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
+            onClick={() => setOpen(false)}
 
         >
             <Box className="flex justify-between">
@@ -92,11 +85,11 @@ export default function TemporaryDrawer() {
 
             <React.Fragment >
                 <Drawer
-                    anchor="top"
+                    anchor="bottom"
                     open={open}
 
 
-                    onClose={toggleDrawer(false)}
+                    onClose={() => setOpen(false)}
                 >
                     {list()}
                 </Drawer>
