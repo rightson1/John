@@ -35,7 +35,7 @@ function MyApp(props) {
       <CacheProvider value={emotionCache}>
         <AnimatePresence>
           <ThemeProvider>
-            {Component.layout ?
+            {/* {Component.layout ?
               <div className="h-screen w-screen overflow-x-hidden">
                 <Navbar />
                 <div className="">
@@ -63,7 +63,15 @@ function MyApp(props) {
 
                 </div>
               </div>
-            }
+            } */}
+            <div className="h-screen w-screen overflow-x-hidden">
+              <Navbar />
+              <div className="">
+                <Component {...pageProps} />
+                <TemporaryDrawer />
+                <Footer />
+              </div>
+            </div>
           </ThemeProvider>
         </AnimatePresence>
       </CacheProvider>
