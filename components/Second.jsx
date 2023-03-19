@@ -9,6 +9,8 @@ import { useRouter } from "next/router";
 const Second = () => {
     const router = useRouter();
     const { colors, section, setSection } = useGlobalProvider();
+    const path = router.pathname
+    console.log(path)
     const scroll = useRef();
     useEffect(() => {
         if (section === "about") {
@@ -17,7 +19,7 @@ const Second = () => {
         }
     });
 
-    return <Grid container rowSpacing={5}
+    return <Grid container rowSpacing={5} id="about"
         className="p-[90px] md:pt-[200px] px-5 md:px-[140px] lg:px-[150px] llg:px-[200px] ">
         <Grid item xs={12} md={6} spacing={2} className="">
             <Typography className="font-semibold" color={colors.grey[100]} variant="h2" fontFamily="Hec" ref={scroll}>

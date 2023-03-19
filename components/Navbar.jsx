@@ -43,6 +43,7 @@ function Navbar() {
     const router = useRouter()
     const path = router.pathname.split('/')[1]
     const { colors, setOpen, setSection } = useGlobalProvider()
+    console.log(!path)
     const handleOpenNavMenu = (event) => {
         setOpen(true)
     };
@@ -126,7 +127,9 @@ function Navbar() {
                             nav.map((item, index) =>
                                 !!item.same ?
                                     <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black" key={index}
-                                        onClick={() => setSection(item.same)}
+                                        onClick={() => {
+                                            !path ? setSection(item.same) : router.push(`/#${item.same}`)
+                                        }}
                                         sx={{
                                             bgcolor: item.link.split('/')[1] == path && colors.black[100] + '!important',
                                             color: item.link.split('/')[1] == path && colors.yellow[500] + '!important',

@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from "next/link";
 import { useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 const Five = () => {
     const { colors, section, setSection, isLarge } = useGlobalProvider();
@@ -58,7 +59,7 @@ const Five = () => {
     }
     return <Grid container
         className="">
-        <Grid item xs={12} md={5} className="relative h-[400px] md:h-full w-[100%] ">
+        <Grid item xs={12} md={5} className="relative h-[400px] md:h-full w-[100%] " id="services">
             <img src="/ex.png" alt="" className="w-full h-full" ref={scroll} />
             <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] " >
                 <Typography className="font-semibold text-white  md:pl-[60px]" color={colors.grey[100]} fontFamily="Lato">
@@ -76,11 +77,35 @@ const Five = () => {
             </div>
 
 
-            <div className="w-full h-full">
+            <Box
+                sx={{
+                    "& .swiper-pagination-bullet-active": {
+                        backgroundColor: colors.yellow[500]
+                    },
+                    "& .swiper-pagination-bullet": {
+                        bgcolor: colors.yellow[500],
+                    },
+                    "& .swiper-button-next": {
+                        color: colors.yellow[500],
+
+                    },
+                    "& .swiper-button-prev": {
+                        color: colors.yellow[500]
+                    },
+
+                }}
+
+                className="w-full h-full">
                 <Swiper
-
-
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false
+                    }}
                     spaceBetween={50}
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+
                     slidesPerView={
                         isLarge ? 2 : 1
                     }
@@ -94,7 +119,7 @@ const Five = () => {
                     }
                 </Swiper>
 
-            </div>
+            </Box>
 
 
 
