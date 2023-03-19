@@ -9,7 +9,7 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 const Six = () => {
     const { colors } = useGlobalProvider();
     return <Grid
-        className="px-1 md:px-[80px] flex justify-center flex-col items-center py-20 -mt-[100px]">
+        className="px-1 md:px-[80px] flex justify-center flex-col items-center py-20">
 
         <Typography className="font-semibold" textAlign="center" color={colors.grey[100]} variant="h2" fontFamily="Hec">
             OUR PATNERS AND CLIENTS
@@ -17,10 +17,10 @@ const Six = () => {
         <Box className="w-[100px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
 
-        <Box className="flex flex-wrap justify-center items-start my-7">
+        <Box className="flex flex-wrap justify-center items-start my-7 ">
 
             {list.map((item, index) => (
-                <Box className="w-[200px] flex flex-col justify-center items-center" key={index}>
+                <Box className="w-[45%]  md:w-[200px] flex flex-col justify-center items-center mt-2" key={index}>
 
                     <img src={item.img} alt="" className="w-[100px] h-[100px] max-w-[250px]" />
                     <Typography className="font-semibold pr-5" textAlign="center" color={colors.grey[100]} fontFamily="Lato">

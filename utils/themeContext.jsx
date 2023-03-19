@@ -38,6 +38,7 @@ export const ThemeProvider = ({ children }) => {
     const isMobileSmall = useMediaQuery("(max-width: 600px)")
     const isLarge = useMediaQuery("(min-width: 900px)");
     const isMedium = useMediaQuery("(max-width: 900px)");
+    const [section, setSection] = useState(null);
 
     return (
         <ThemeContext.Provider
@@ -55,6 +56,10 @@ export const ThemeProvider = ({ children }) => {
                 setClose,
                 isMobileSmall,
                 isMedium,
+                setSection,
+                section,
+
+
             }}
         >
 

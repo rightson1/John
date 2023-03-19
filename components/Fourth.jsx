@@ -11,8 +11,9 @@ const Fourth = () => {
     return <Grid container gap={3}
         className="px-1 md:px-[80px]  lg:px-[100px] llg:px-[120px] py-10 -mt-[100px]">
         <Grid item xs={12} md={5.5} className=" p-4" sx={{
-
-        }}>
+            display: { xs: 'none', md: 'block' },
+        }}
+        >
             <img src="/machine.png" alt="" className="h-[400px] md:h-full w-[100%]  object-coverr" />
         </Grid>
         <Grid item xs={12} md={5.5} className="p-4 flex-col gap-1 flex">

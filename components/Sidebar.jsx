@@ -13,15 +13,9 @@ import { Dashboard, Sell } from '@mui/icons-material';
 import { Button, IconButton, ListItemIcon } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useRouter } from 'next/router';
-import { useAuth } from '../utils/authContext';
-import QuestionMarkOutlinedIcon from '@mui/icons-material/QuestionMarkOutlined';
-import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
-import HomeWorkIcon from '@mui/icons-material/HomeWork';
-import BookIcon from '@mui/icons-material/Book';
-import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import Link from 'next/link';
 export default function TemporaryDrawer() {
-    const { open, setOpen, colors } = useGlobalProvider()
+    const { open, setOpen, setSection } = useGlobalProvider()
     const router = useRouter()
 
     const toggleDrawer = (click) => (event) => {
@@ -33,6 +27,7 @@ export default function TemporaryDrawer() {
     };
 
     const list = () => (
+
         <Box className="px-2 bg-transparent"
             sx={{
                 py: 2,
@@ -58,14 +53,25 @@ export default function TemporaryDrawer() {
 
                         return (
                             <>
-                                <Link href={item.link}>
-                                    <ListItemButton className='py-5'>
+                                {!!item.same ? (
+                                    <ListItemButton className='py-5' onClick={() => setSection(item.same)}>
 
                                         <ListItemText>
                                             {item.name}
                                         </ListItemText>
                                     </ListItemButton>
-                                </Link>
+                                ) : (
+                                    <Link href={item.link}>
+                                        <ListItemButton className='py-5'>
+
+                                            <ListItemText>
+                                                {item.name}
+                                            </ListItemText>
+                                        </ListItemButton>
+                                    </Link>
+                                )
+
+                                }
                             </>
                         )
 
@@ -94,44 +100,31 @@ export default function TemporaryDrawer() {
     );
 }
 
-const listItems = [
+const listItems = [{
+    name: 'Home',
+    link: '/'
+},
+{
+    name: 'About Us ',
+    link: '/about',
+    same: "about"
+}, {
+    name: 'Our Services',
+    link: '/services',
+    same: "services"
 
-    {
-        name: 'Home',
-        link: '/',
-        icon: <Dashboard />
+}, {
+    name: 'Projects',
+    link: '/projects'
+},
 
-    },
-    {
-        name: 'ABOUT US',
-        link: '/about',
-        icon: <QuestionMarkOutlinedIcon />
-
-    },
-    {
-        name: 'OUR SERVICES',
-        link: '/services',
-        icon: <MiscellaneousServicesOutlinedIcon />
-
-    },
-    {
-        name: 'PROJECTS',
-        link: '/projects',
-        icon: <HomeWorkIcon />
-
-    },
-    {
-        name: 'NEW & BLOGS',
-        link: '/blogs',
-        icon: <BookIcon />
-
-    },
-    {
-        name: 'CONTACT US',
-        link: '/contact',
-        icon: <CallOutlinedIcon />
-
-    },
-
-
+{
+    name: 'News And Blogs',
+    link: '/blogs'
+}
+    ,
+{
+    name: 'Contact Us',
+    link: '/contact'
+}
 ]

@@ -17,7 +17,7 @@ import TemporaryDrawer from "../components/Sidebar";
 import Footer from "../components/Footer";
 import HomeNav from "../components/HomeNav";
 import PlaceDrawer from "../components/PlaceDrawer";
-
+import 'swiper/css';
 function MyApp(props) {
 
   const clientSideEmotionCache = createEmotionCache();

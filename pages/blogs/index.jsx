@@ -1,16 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
 import Typography from '@mui/material/Typography';
-import { useGlobalProvider } from "../utils/themeContext";
+import { useGlobalProvider } from "../../utils/themeContext";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Divider from '@mui/material/Divider';
-import { client } from "../lib/client";
+import { client } from "../../lib/client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
@@ -58,7 +53,7 @@ const Blogs = ({ posts }) => {
 
                     return (
                         <Grid item xs={12} md={6} lg={4} key={item.img} className="">
-                            <Link href={`/post/${slug}`}>
+                            <Link href={`/blogs/${slug}`}>
                                 <Box className="relative">
                                     <img
                                         src={`${coverImage.fields.file.url}`}

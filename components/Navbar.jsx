@@ -17,10 +17,12 @@ const nav = [{
 },
 {
     name: 'About Us ',
-    link: '/about'
+    link: '/about',
+    same: "about"
 }, {
     name: 'Our Services',
-    link: '/services'
+    link: '/services',
+    same: "services"
 
 }, {
     name: 'Projects',
@@ -28,7 +30,7 @@ const nav = [{
 },
 
 {
-    name: 'News And Blog',
+    name: 'News And Blogs',
     link: '/blogs'
 }
     ,
@@ -40,7 +42,7 @@ const nav = [{
 function Navbar() {
     const router = useRouter()
     const path = router.pathname.split('/')[1]
-    const { colors, setOpen } = useGlobalProvider()
+    const { colors, setOpen, setSection } = useGlobalProvider()
     const handleOpenNavMenu = (event) => {
         setOpen(true)
     };
@@ -122,8 +124,9 @@ function Navbar() {
                     <div className="flex gap-3 bg-white shadow-md">
                         {
                             nav.map((item, index) =>
-                                <Link href={`${item.link}`} key={index}>
-                                    <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
+                                !!item.same ?
+                                    <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black" key={index}
+                                        onClick={() => setSection(item.same)}
                                         sx={{
                                             bgcolor: item.link.split('/')[1] == path && colors.black[100] + '!important',
                                             color: item.link.split('/')[1] == path && colors.yellow[500] + '!important',
@@ -133,7 +136,19 @@ function Navbar() {
                                         {item.name}
 
                                     </Button>
-                                </Link>
+                                    :
+                                    <Link href={`${item.link}`} key={index}>
+                                        <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
+                                            sx={{
+                                                bgcolor: item.link.split('/')[1] == path && colors.black[100] + '!important',
+                                                color: item.link.split('/')[1] == path && colors.yellow[500] + '!important',
+
+                                            }}
+                                        >
+                                            {item.name}
+
+                                        </Button>
+                                    </Link>
 
 
                             )

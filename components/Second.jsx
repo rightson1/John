@@ -3,18 +3,31 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+import { useRef } from "react";
+import { useRouter } from "next/router";
 
 const Second = () => {
-    const { colors } = useGlobalProvider();
-    return <Grid container
-        className="p-[90px] pt-[200px] px-10 md:px-[140px] lg:px-[150px] llg:px-[200px] ">
+    const router = useRouter();
+    const { colors, section, setSection } = useGlobalProvider();
+    const scroll = useRef();
+    useEffect(() => {
+        if (section === "about") {
+            scroll.current?.scrollIntoView({ behavior: "smooth" });
+            setSection("");
+        }
+    });
+
+    return <Grid container rowSpacing={5}
+        className="p-[90px] md:pt-[200px] px-5 md:px-[140px] lg:px-[150px] llg:px-[200px] ">
         <Grid item xs={12} md={6} spacing={2} className="">
-            <Typography className="font-semibold" color={colors.grey[100]} variant="h2" fontFamily="Hec">
+            <Typography className="font-semibold" color={colors.grey[100]} variant="h2" fontFamily="Hec" ref={scroll}>
                 ABOUT US
             </Typography>
             <Box className="w-[70px] h-[5px]  my-3
         "  bgcolor={colors.yellow[500]}></Box>
-            <div className="flex gap-3 flex-col">
+            <div className="flex gap-3 flex-col"
+
+            >
                 <Typography color={colors.grey[100]} variant="h6" fontFamily="Lato" className="font-[600] text-[13px]">
                     John Lee Miller Limited is a fast growing Building and Construction company working towards being a world class contractor. Through commitment to improvements we are continuously seeking waste elimination, driving up quality of our services and maximizing value to for clients.
 
@@ -27,6 +40,7 @@ const Second = () => {
             </div>
             <Button
                 className="uppercase rounded-none py-3  w-[160px] text-black flex items-center "
+                onClick={() => { router.push('/jml.pdf') }}
                 sx={{
                     bgcolor: colors.yellow[500] + '!important',
                     color: colors.grey[100] + '!important',

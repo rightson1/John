@@ -1,10 +1,5 @@
 import React from "react";
 import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
 import Typography from '@mui/material/Typography';
 import { useGlobalProvider } from "../../utils/themeContext";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -15,9 +10,9 @@ import { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
 import Grid from '@mui/material/Grid';
 const Projects = ({ posts }) => {
-    const { colors, isMobile, isMedium } = useGlobalProvider()
+    const { colors, isMobile, } = useGlobalProvider()
     const [page, setPage] = useState(1);
-    const [blogsPerPage, setBlogsPerPage] = useState(4);
+    const [blogsPerPage, setBlogsPerPage] = useState(isMobile ? 2 : 4);
     const totalBlogs = posts.length;
 
     useEffect(() => {
@@ -45,17 +40,17 @@ const Projects = ({ posts }) => {
             <Box className="w-[100px] h-[7px]  my-3 flex justify-center items-start
         "  bgcolor={colors.yellow[500]}></Box>
         </div>
-        <div className="flex w-full p-10 ">
-            <Divider flexItem width="100%" sx={{ borderBottomWidth: 5 }} />
+        <div className="flex w-full p-5 mt-5 md:p-10 ">
+            <Divider flexItem width="100%" sx={{ borderBottomWidth: 2 }} />
         </div>
 
-        <div className="flex items-center justify-center p-5 md:p-10 flex-col pb-10">
+        <div className="flex items-center justify-center p-5 md:p-10 flex-col pb-10 ">
             <Grid container spacing={2}>
                 {displayedPosts.map((item) => {
                     const { name, image, slug, excerpt, date, coverImage } = item.fields
                     return <Grid item xs={12} md={6} key={item}>
-                        <div className="flex flex-col items-center justify-center p-5">
-                            <div className="flex flex-col items-center justify-center p-5">
+                        <div className="flex flex-col items-center justify-center md:p-5">
+                            <div className="flex flex-col items-center justify-center md:p-5">
                                 <img src={coverImage.fields.file.url} alt="" className="w-full min-h-[300px] max-h-[350px] object-cover " />
                                 <div className="flex flex-col items-center justify-center py-5">
                                     <Typography variant="h3" textAlign="left" fontFamily="Lato" className=" text-black font-[900]  self-start" >
