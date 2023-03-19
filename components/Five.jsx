@@ -2,8 +2,6 @@ import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useState, useCallback } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
-import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
-import { motion } from "framer-motion";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from "next/link";
 import { useRef } from "react";
@@ -39,7 +37,7 @@ const Five = () => {
                 </div>
                 <Box className="bg-black h-1/4 relative hov transition ease-in-out duration-500  ">
                     <Link href="/contact">
-                        <motion.div className="h-[50px] absolute -top-[50px] w-full bg-[#fff200] z-[5] cursor-pointer flex justify-center items-center opacity-0 hov">
+                        <div className="h-[50px] absolute -top-[50px] w-full bg-[#fff200] z-[5] cursor-pointer flex justify-center items-center opacity-0 hov">
 
                             <Typography fontFamily="Lato">   Contact Us
 
@@ -48,7 +46,7 @@ const Five = () => {
 
                             <ArrowRightAltIcon className="ml-2" />
 
-                        </motion.div>
+                        </div>
                     </Link>
                     <Typography variant="h4" className="text-white text-center flex justify-center items-center p-4" fontFamily="Lato">
                         {text}
@@ -58,16 +56,16 @@ const Five = () => {
         )
     }
     return <Grid container
-        className="">
-        <Grid item xs={12} md={5} className="relative h-[400px] md:h-full w-[100%] " id="services">
+        className=" px-5 md:px-0">
+        <Grid item xs={12} md={5} className="relative h-[400px] md:h-full w-[100%]" id="services">
             <img src="/ex.png" alt="" className="w-full h-full" ref={scroll} />
-            <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] " >
+            <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] w-full" >
                 <Typography className="font-semibold text-white  md:pl-[60px]" color={colors.grey[100]} fontFamily="Lato">
                     The health and safety of our staff and property entrusted to us by our clients is of paramount importance to our organization as is looking after the environment in which we operate in to make it better for the communities that live there.
                 </Typography>
             </Box>
         </Grid>
-        <Grid item xs={12} md={7} className="p-4 flex-col flex">
+        <Grid item xs={12} md={7} className="md:p-4 flex-col flex">
             <div className="flex flex-col  my-7">
                 <Typography className="font-semibold my-4" color={colors.grey[100]} variant="h2" fontFamily="Hec">
                     OUR SERVICES
@@ -86,7 +84,10 @@ const Five = () => {
                         }
                     },
                     "& .swiper-pagination-bullet-active": {
-                        backgroundColor: colors.yellow[500]
+                        backgroundColor: {
+                            sm: 'white',
+                            md: 'black'
+                        }
                     },
 
                     "& .swiper-button-next": {
@@ -96,6 +97,13 @@ const Five = () => {
                     "& .swiper-button-prev": {
                         color: colors.yellow[500]
                     },
+                    "& .swiper-pagination": {
+                        mt: {
+                            sm: 0,
+                            md: 10
+                        }
+                    }
+
 
                 }}
 

@@ -102,7 +102,6 @@ const Blogs = ({ posts }) => {
     </div>;
 };
 
-Blogs.layout = true;
 
 export const getStaticProps = async () => {
     const response = await client.getEntries({ content_type: 'post' })

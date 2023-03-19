@@ -1,6 +1,4 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { useEffect } from "react";
-import { useState } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
 
 const Third = () => {

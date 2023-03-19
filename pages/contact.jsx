@@ -64,5 +64,4 @@ const Contact = () => {
 
 };
 
-Contact.layout = true;
 export default Contact;

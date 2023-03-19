@@ -1,10 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
-import { useEffect } from "react";
-import { useState } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
-import { Link, animateScroll as scroll } from 'react-scroll';
 
 const Hero = () => {
     const { colors, setSection } = useGlobalProvider();
@@ -25,18 +22,15 @@ const Hero = () => {
                 In both workmanship, professionalism
                 and value for money
             </Typography>
-            <Link to="#services"
-                spy={true}
-                hashSpy={true}
+
+            <Button
+                className="capitalize rounded-none py-3 px-0   text-white flex justify-start text-[17px]"
+                onClick={() => setSection("services")}
             >
-                <Button
-                    className="capitalize rounded-none py-3 px-0   text-white flex justify-start text-[17px]"
-                    onClick={() => setSection("services")}
-                >
-                    Our Services
-                    <ArrowRightAltIcon className="ml-2" />
-                </Button>
-            </Link>
+                Our Services
+                <ArrowRightAltIcon className="ml-2" />
+            </Button>
+
         </div>
 
     </Box>

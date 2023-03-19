@@ -16,7 +16,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 export default function TemporaryDrawer() {
     const { open, setOpen, setSection } = useGlobalProvider()
-    const router = useRouter()
+    const router = useRouter();
+    const path = router.pathname.split('/')[1]
 
     const toggleDrawer = (click) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -54,7 +55,12 @@ export default function TemporaryDrawer() {
                         return (
                             <>
                                 {!!item.same ? (
-                                    <ListItemButton className='py-5' onClick={() => setSection(item.same)}>
+                                    <ListItemButton className='py-5'
+
+                                        onClick={() => {
+                                            !path ? setSection(item.same) : router.push(`/#${item.same}`)
+                                        }}
+                                    >
 
                                         <ListItemText>
                                             {item.name}

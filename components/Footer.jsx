@@ -10,7 +10,6 @@ import React from "react";
 import { useGlobalProvider } from "../utils/themeContext";
 import TextField from '@mui/material/TextField';
 import emailjs from '@emailjs/browser';
-import { toast, Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 const Footer = () => {
@@ -105,7 +104,6 @@ const Footer = () => {
                 View Profile
             </Button>
         </Grid>
-        <Toaster />
     </Grid>;
 };
 

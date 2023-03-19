@@ -1,10 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { useEffect } from "react";
-import { useState } from "react";
 import { useGlobalProvider } from "../utils/themeContext";
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import TrackChangesIcon from '@mui/icons-material/TrackChanges';
-import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
 const Six = () => {
     const { colors } = useGlobalProvider();

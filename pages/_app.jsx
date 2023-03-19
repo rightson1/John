@@ -9,14 +9,9 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from "../utils/themeContext";
-import { AnimatePresence } from "framer-motion";
-import ScrollToTop from "react-scroll-to-top";
-import { Toaster } from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import TemporaryDrawer from "../components/Sidebar";
 import Footer from "../components/Footer";
-import HomeNav from "../components/HomeNav";
-import PlaceDrawer from "../components/PlaceDrawer";
 import 'swiper/css';
 import "swiper/swiper-bundle.css";
 function MyApp(props) {
@@ -34,47 +29,16 @@ function MyApp(props) {
 
       </Head>
       <CacheProvider value={emotionCache}>
-        <AnimatePresence>
-          <ThemeProvider>
-            {/* {Component.layout ?
-              <div className="h-screen w-screen overflow-x-hidden">
-                <Navbar />
-                <div className="">
-                  <Component {...pageProps} />
-                  <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
-                  <Toaster />
-                  <TemporaryDrawer />
-                  <Footer />
-                </div>
-              </div> : Component.nolayout ? <div className="h-screen w-screen overflow-x-hidden">
-                <div className="">
-                  <Component {...pageProps} />
-                  <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
-                  <Toaster />
-                  <TemporaryDrawer />
-
-                </div>
-              </div> : <div className="h-screen w-screen overflow-x-hidden">
-                <HomeNav />
-                <div className="">
-                  <Component {...pageProps} />
-                  <ScrollToTop smooth color={"#FF6929"} height="15px" className="top" />
-                  <Toaster />
-                  <PlaceDrawer />
-
-                </div>
-              </div>
-            } */}
-            <div className="h-screen w-screen overflow-x-hidden">
-              <Navbar />
-              <div className="">
-                <Component {...pageProps} />
-                <TemporaryDrawer />
-                <Footer />
-              </div>
+        <ThemeProvider>
+          <div className="h-screen w-screen overflow-x-hidden">
+            <Navbar />
+            <div className="">
+              <Component {...pageProps} />
+              <TemporaryDrawer />
+              <Footer />
             </div>
-          </ThemeProvider>
-        </AnimatePresence>
+          </div>
+        </ThemeProvider>
       </CacheProvider>
     </>
   );
