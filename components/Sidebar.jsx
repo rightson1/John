@@ -60,14 +60,16 @@ export default function TemporaryDrawer() {
                                         </ListItemText>
                                     </ListItemButton>
                                 ) : (
-                                    <Link href={item.link}>
-                                        <ListItemButton className='py-5'>
 
-                                            <ListItemText>
-                                                {item.name}
-                                            </ListItemText>
-                                        </ListItemButton>
-                                    </Link>
+                                    <ListItemButton className='py-5'
+                                        onClick={() => router.push(item.link)}
+                                    >
+
+                                        <ListItemText>
+                                            {item.name}
+                                        </ListItemText>
+                                    </ListItemButton>
+
                                 )
 
                                 }
@@ -85,8 +87,11 @@ export default function TemporaryDrawer() {
 
             <React.Fragment >
                 <Drawer
-                    anchor="bottom"
+                    anchor="top"
                     open={open}
+                    sx={{
+                        bgcolor: 'rgba(0,0,0,.9)'
+                    }}
 
 
                     onClose={() => setOpen(false)}
