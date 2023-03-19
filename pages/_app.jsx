@@ -34,7 +34,7 @@ function MyApp(props) {
             <Navbar />
             <div className="">
               <Component {...pageProps} />
-              <TemporaryDrawer />
+              {/* <TemporaryDrawer /> */}
               <Footer />
             </div>
           </div>

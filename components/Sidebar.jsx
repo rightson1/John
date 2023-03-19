@@ -14,12 +14,12 @@ import { Button, IconButton, ListItemIcon } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-export default function TemporaryDrawer() {
-    const { open, setOpen, setSection } = useGlobalProvider()
+export default function Sidebar({ open, setOpen }) {
+    const { setSection } = useGlobalProvider()
     const router = useRouter();
     const path = router.pathname.split('/')[1]
 
-
+    console.log(open)
 
     const list = () => (
 
