@@ -51,6 +51,7 @@ export default function TemporaryDrawer() {
                                     <ListItemButton className='py-5'
 
                                         onClick={() => {
+                                            setOpen(false)
                                             !path ? setSection(item.same) : router.push(`/#${item.same}`)
                                         }}
                                     >
@@ -62,7 +63,10 @@ export default function TemporaryDrawer() {
                                 ) : (
 
                                     <ListItemButton className='py-5'
-                                        onClick={() => router.push(item.link)}
+                                        onClick={() => {
+                                            router.push(item.link);
+                                            !path ? setSection(item.same) : router.push(`/#${item.same}`)
+                                        }}
                                     >
 
                                         <ListItemText>
