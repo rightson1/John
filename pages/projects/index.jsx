@@ -26,7 +26,7 @@ const Projects = ({ posts }) => {
     const startIndex = (page - 1) * blogsPerPage;
     const endIndex = startIndex + blogsPerPage;
     const displayedPosts = posts.slice(startIndex, endIndex);
-    return <div className="w-full min-h-screen">
+    return <div className="w-full h-full">
         <div className="flex h-[40vh] hero justify-center align-center items-center flex-col">
 
             <Typography variant="h1" fontFamily="Hec" className=" text-white font-[900] " fontSize={{

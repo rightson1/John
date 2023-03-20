@@ -55,7 +55,7 @@ const Five = () => {
         )
     }
     return <Grid container
-        className=" px-5 md:px-0">
+        className=" px-5 md:px-0 flex justify-end">
         <Grid item xs={12} md={5} className="relative h-[400px] md:h-full w-[100%]" id="services">
             <img src="/ex.png" alt="" className="w-full h-full" ref={scroll} />
             <Box className="absolute bottom-0    px-4 py-10 bg-[rgba(0,0,0,.8)] w-full" >
