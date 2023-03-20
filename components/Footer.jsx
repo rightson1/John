@@ -119,7 +119,7 @@ const Footer = () => {
 
             </Typography>
             <Typography className="text-black text-center py-1 px-2 font-[500]" color={colors.grey[100]} variant="body1" fontFamily="Lato">
-                © 2021 John Lee Miller Limited. All Rights Reserved.
+                © 2023 John Lee Miller Limited. All Rights Reserved.
             </Typography>
         </Grid>
 
