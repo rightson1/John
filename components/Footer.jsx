@@ -79,12 +79,12 @@ const Footer = () => {
                 })}
 
             </Box>
-            <Box className="flex-1 w-full  flex flex-col gap-2 mt-5 items-center">
-                <Typography className="font-semibold text-white text-center md:text-start" color={colors.grey[100]} variant="h6" fontFamily="Lato">
+            <Box className="flex-1 w-full  flex flex-col gap-2 mt-5  justify-center  pl-5">
+                <Typography className="font-semibold text-white text-start md:text-start " color={colors.grey[100]} variant="h6" fontFamily="Lato"  >
                     Subscribe to our Newsletter
                 </Typography>
-                <div className=" flex-1 flex justify-center  items-center w-[90%] md:w-full">
-                    <input type="text" className=' px-4 outline-none w-3/4 h-[40px]' />
+                <div className=" flex-1 flex justify-start  items-center  md:w-full">
+                    <input type="text" className=' px-4 outline-none w-[85%] h-[40px]' />
                     <Button>
                         <SendIcon className='text-[40px] text-white' sx={{
                             color: colors.yellow[500] + '!important',
@@ -94,10 +94,10 @@ const Footer = () => {
                 </div>
             </Box>
         </Grid>
-        <Grid item xs={12} md={4} lg={2} className="flex  justify-center items-center px-1 pr-3 md:pr-0">
+        <Grid item xs={12} md={4} lg={2} className="flex  justify-center items-center pr-3 md:pr-0  px-5">
             <Button
                 onClick={() => { router.push('/jml.pdf') }}
-                className="uppercase rounded-none py-3   text-black flex items-center w-[84%] md:w-full justify-center px-4"
+                className="uppercase rounded-none py-3   text-black flex items-center w-full md:w-full justify-center mx-5 md:mx-0 px-4"
                 sx={{
                     bgcolor: colors.yellow[500] + '!important',
                     color: colors.grey[100] + '!important',
@@ -108,7 +108,7 @@ const Footer = () => {
                 View Profile
             </Button>
         </Grid>
-        <Grid item xs={12} md={12} className="text-white absolute bottom-0 left-0 w-full flex  flex-col md:flex-row justify-between py-1 px-5" sx={{
+        <Grid item xs={12} md={12} className="text-white absolute bottom-0 left-0 w-full flex  flex-col md:flex-row justify-between py-1 px-5 " sx={{
 
 
             bgcolor: colors.yellow[500],
