@@ -72,11 +72,11 @@ function Navbar() {
             }}>
                 <Container maxWidth="xl">
                     <Toolbar
-                        className='flex'>
+                        className='flex py-2 pb-6'>
                         <Box
                             variant="h6"
                             component="button"
-                            className='flex flex-row items-center gap-4 flex-1 '
+                            className='flex flex-row items-center gap-4 flex-1   '
                             onClick={() => { router.push('/') }}
                             sx={{
                                 fontFamily: 'Regular',
@@ -121,7 +121,7 @@ function Navbar() {
                     </Toolbar>
                 </Container>
                 <Box
-                    className="flex justify-center items-center  absolute -bottom-[50px] z-10 w-full">
+                    className="flex justify-center items-center  absolute -bottom-[30px] z-10 w-full">
                     <div className="flex gap-3 bg-white shadow-md">
                         {
                             nav.map((item, index) => {
@@ -143,8 +143,8 @@ function Navbar() {
                                     <Link href={`${item.link}`} key={index}>
                                         <Button className="uppercase rounded-none py-4  px-6 hover:bg-primary text-black"
                                             sx={{
-                                                bgcolor: item.link.split('/')[1] == path && colors.black[100] + '!important',
-                                                color: item.link.split('/')[1] == path && colors.yellow[500] + '!important',
+                                                bgcolor: (item.link == '/contact' ? colors.black[500] : item.link.split('/')[1] == path && colors.grey[800]) + '!important',
+                                                color: (item.link == '/contact' ? colors.yellow[500] : item.link.split('/')[1] == path && colors.black[500]) + '!important',
 
                                             }}
                                         >
