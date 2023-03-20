@@ -93,9 +93,9 @@ export default function Sidebar({ open, setOpen }) {
                 <Drawer
                     anchor="top"
                     open={open}
-                    sx={{
-                        bgcolor: 'rgba(0,0,0,.9)'
-                    }}
+                    // sx={{
+                    //     bgcolor: 'rgba(0,0,0,.9)'
+                    // }}
 
 
                     onClose={() => setOpen(false)}
