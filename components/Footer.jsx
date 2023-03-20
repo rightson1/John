@@ -86,7 +86,9 @@ const Footer = () => {
                 <div className=" flex-1 flex justify-center  items-center w-[90%] md:w-full">
                     <input type="text" className=' px-4 outline-none w-3/4 h-[40px]' />
                     <Button>
-                        <SendIcon className='text-[40px] text-white' />
+                        <SendIcon className='text-[40px] text-white' sx={{
+                            color: colors.yellow[500] + '!important',
+                        }} />
                     </Button>
 
                 </div>

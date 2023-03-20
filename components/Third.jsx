@@ -5,7 +5,7 @@ const Third = () => {
     const { colors } = useGlobalProvider();
     return <Grid container gap={3}
         className="p-[90px] px-5 md:px-[140px] lg:px-[150px] llg:px-[200px] relative  -mt-[100px] ">
-        <img src="/bg.png" alt="" className="absolute   md:w-screen h-[130vh] -top-[350px] left-0  z-[1]" />
+        <img src="/bg.png" alt="" className="absolute   md:w-screen h-[130vh] -top-[350px] left-0  z-[1] pointer-events-none" />
         <Grid item xs={12} md={5.5} className="bg-primary   z-[4]  " spacing={4}>
             <Typography className="font-semibold my-4" textAlign="center" color={colors.grey[100]} variant="h4" fontFamily="Hec">
                 OUR MISSION

@@ -40,7 +40,7 @@ const Second = () => {
                 </Typography>
             </div>
             <Button
-                className="uppercase rounded-none py-3  w-[160px] text-black flex items-center "
+                className="uppercase rounded-none py-3  w-[160px] text-black flex items-center  cursor-pointer"
                 onClick={() => { router.push('/jml.pdf') }}
                 sx={{
                     bgcolor: colors.yellow[500] + '!important',
