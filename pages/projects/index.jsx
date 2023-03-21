@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
 import Grid from '@mui/material/Grid';
+import Title from "../../components/Title";
 const Projects = ({ posts }) => {
     const { colors, isMobile, } = useGlobalProvider()
     const [page, setPage] = useState(1);
@@ -27,6 +28,7 @@ const Projects = ({ posts }) => {
     const endIndex = startIndex + blogsPerPage;
     const displayedPosts = posts.slice(startIndex, endIndex);
     return <div className="w-full h-full">
+        <Title title="John Lee Miller |Our Projects in Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies" description="JLM has successfully completed various projects in Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies. Browse our portfolio to see our excellent work and how we can help you achieve your vision" />
         <div className="flex h-[40vh] hero justify-center align-center items-center flex-col">
 
             <Typography variant="h1" fontFamily="Hec" className=" text-white font-[900] " fontSize={{

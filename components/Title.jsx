@@ -1,25 +1,18 @@
-import React from "react";
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import Head from 'next/head'
 
-import { useGlobalProvider } from "../utils/themeContext"
-// import Header from "./Header";
-import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
-const Title = ({ title, subtitle }) => {
-    const { colors } = useGlobalProvider()
-    return <Box px={2} pb={2}>
-        {/* <Header title={title} desc={subtitle} /> */}
-        {title && <Typography variant="h6" fontWeight="thin" sx={{
-            fontSize: "1.2rem", fontFamily: "Nunito",
-        }} color={colors.grey[100]}> Home <ChevronRightOutlinedIcon />
-            <Typography fontWeight="bold" variant="h6" component="span" sx={{
-                fontSize: "1.3rem",
-                fontFamily: "Nunito",
-            }}> {title}</Typography>
+export default function Title({ description, title }) {
+    return (
+        <Head>
+            <title>{title || ''} </title>
+            <meta name="description" content={description || ''} />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="John Lee Miller" />
+            <meta property="og:description" content={description || ''} />
+            <meta property="twitter:description" content={description || ''} />
+            <meta property="og:url" content="https://www.jlmillerltd.com" />
+            <meta property="og:image" content=" https://www.jlmillerltd.com/logo.png" />
+            <meta property="og:type" content="website" />
 
-        </Typography>}
-        <Typography variant="h3" fontWeight="bold"  >{subtitle}</Typography>
-    </Box>;
-};
-
-export default Title;
+        </Head>
+    )
+}

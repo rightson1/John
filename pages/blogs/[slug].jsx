@@ -8,10 +8,12 @@ import Divider from '@mui/material/Divider';
 
 const Post = ({ post, preview }) => {
     const router = useRouter();
-    console.log(post)
+
+
 
     return (
         <section className='py-10'>
+
             <div className="flex w-full justify-center md:my-10 p-10">
                 <div className="w-full max-w-[900px]">
                     <div className="h-[2px] w-full  bg-[rgba(0,0,0,.3)]"></div>

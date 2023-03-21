@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Pagination from '@mui/material/Pagination';
 import { Grid } from "@mui/material";
+import Title from "../../components/Title";
 const Blogs = ({ posts }) => {
     const { colors, isMobile, isMedium } = useGlobalProvider()
     const [page, setPage] = useState(1);
@@ -30,6 +31,7 @@ const Blogs = ({ posts }) => {
 
     return <div className="w-full h-full">
         <div className="flex h-[40vh] hero justify-center align-center items-center flex-col">
+            <Title title="John Lee Miller |JLM | Latest News and Tips on Landscaping, Interior Design, Architecture, and Construction Supplies" description=" Stay up-to-date with the latest news and tips in the world of Landscaping, Interior Design, Architecture, and Construction Supplies with JLM's blog. Our expert writers provide insightful articles to help you make informed decisions" />
 
             <Typography variant="h1" fontFamily="Hec" className=" text-white font-[900] " fontSize={{
                 xs: 30,

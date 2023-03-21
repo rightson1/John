@@ -19,7 +19,6 @@ export default function Sidebar({ open, setOpen }) {
     const router = useRouter();
     const path = router.pathname.split('/')[1]
 
-    console.log(open)
 
     const list = () => (
 

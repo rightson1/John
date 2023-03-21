@@ -10,7 +10,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider } from "../utils/themeContext";
 import Navbar from "../components/Navbar";
-import TemporaryDrawer from "../components/Sidebar";
+
 import Footer from "../components/Footer";
 import 'swiper/css';
 import "swiper/swiper-bundle.css";
@@ -22,10 +22,15 @@ function MyApp(props) {
   return (
     <>
       <Head>
-        <title>JLM </title>
-        <meta name="description" content="JLM" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>John Lee Miller | Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies  </title>
+        <meta name="description" content="JLM offers exceptional services in Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies. We provide our clients with expert solutions and high-quality materials to ensure their satisfaction." />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="John Lee Miller" />
+        <meta property="og:description" content="JLM offers exceptional services in Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies. We provide our clients with expert solutions and high-quality materials to ensure their satisfaction." />
+        <meta property="twitter:description" content="JLM offers exceptional services in Landscaping, Interior Design, Architecture, Consultancy, and Construction Supplies. We provide our clients with expert solutions and high-quality materials to ensure their satisfaction." />
+        <meta property="og:url" content="https://www.jlmillerltd.com" />
+        <meta property="og:image" content=" https://www.jlmillerltd.com/logo.png" />
+        <meta property="og:type" content="website" />
 
       </Head>
       <CacheProvider value={emotionCache}>
